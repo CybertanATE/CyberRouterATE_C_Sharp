@@ -1,0 +1,362 @@
+V1.0.2019.1202 :
+	Release Date: 2019/12/02
+	Release History:
+		New Item:
+				  None
+
+		Fixed Issue: 
+				  1. Fix FW Upgrade/Downgrade Stress Test issue
+
+
+		All Items: 
+				  1. RvR Test:			  		v1.0.2018.1001
+				  2. Power On/Off Test: 	  		v1.0.2018.1001
+				  3. RvR-Turn Table Test: 			v1.0.2018.1001
+				  4. Interoperability Test:	 		v1.0.2018.1001
+				  5. Throughput Test: 				v1.0.2018.1001
+				  6. Web GUI Test:
+				  	- FW Upgrade/Downgrade Stress Test	v1.0.2019.1202
+				  	- GUI test				v1.0.2018.1214
+				  7. USB Storage test				v1.0.2018.1227
+
+------------------------------------------------------------------------------------------------------------------
+
+V1.0.2019.0312 :
+	Release Date: 2019/03/12
+	Release History:
+		New Item:
+				  1. Add Guest Network Test function and basic script
+
+		Fixed Issue: 
+				  None
+
+
+		All Items: 
+				  1. RvR Test:			  		v1.0.2018.1001
+				  2. Power On/Off Test: 	  		v1.0.2018.1001
+				  3. RvR-Turn Table Test: 			v1.0.2018.1001
+				  4. Interoperability Test:	 		v1.0.2018.1001
+				  5. Throughput Test: 				v1.0.2018.1001
+				  6. Web GUI Test:
+				  	- FW Upgrade/Downgrade Stress Test	v1.0.2019.0215
+				  	- GUI test				v1.0.2018.1214
+				  7. USB Storage test				v1.0.2018.1227
+				  8. Guest Nwtwork Test				v1.0.2019.0312
+				  9. Chamber Performance test			v1.0.2018.1221
+
+------------------------------------------------------------------------------------------------------------------
+
+V1.0.2019.0215 :
+	Release Date: 2019/02/15
+	Release History:
+		New Item:
+				  1. Add DUT System FW Check time period
+
+		Fixed Issue: 
+				  None
+
+
+		All Items: 
+				  1. RvR Test:			  		v1.0.2018.1001
+				  2. Power On/Off Test: 	  		v1.0.2018.1001
+				  3. RvR-Turn Table Test: 			v1.0.2018.1001
+				  4. Interoperability Test:	 		v1.0.2018.1001
+				  5. Throughput Test: 				v1.0.2018.1001
+				  6. Web GUI Test:
+				  	- FW Upgrade/Downgrade Stress Test	v1.0.2019.0215
+				  7. USB Storage test				v1.0.2018.1227
+				  8. GUI test					v1.0.2018.1214
+				  9. Chamber Performance test			v1.0.2018.1221
+
+------------------------------------------------------------------------------------------------------------------
+
+
+V1.0.2018.1227 :
+	Release Date: 2018/12/27
+	Release History:
+		New Item:
+				  None
+
+
+		Fixed Issue: 
+				1. Fixed steps script 1.3.1 and 1.5.23
+				2. Line Notify (bata) debug
+				3. Setup menu -> Line Notify (bata)
+
+		All Items: 
+		          1. RvR Test:			  		v1.0.2018.1001
+		          2. Power On/Off Test: 	  		v1.0.2018.1001
+			  3. RvR-Turn Table Test: 			v1.0.2018.1001
+			  4. Interoperability Test:	 		v1.0.2018.1001
+			  5. Throughput Test: 				v1.0.2018.1001
+			  6. Web GUI Test:
+                                - FW Upgrade/Downgrade Stress Test	v1.0.2018.1214
+			  7. USB Storage test				v1.0.2018.1227
+			  8. GUI test					v1.0.2018.1214
+			  9. Chamber Performance test			v1.0.2018.1221
+
+------------------------------------------------------------------------------------------------------------------
+
+V1.0.2018.1221 :
+	Release Date: 2018/12/21
+	Release History:
+		New Item:
+				  None
+
+
+		Fixed Issue: 
+				1. Error message
+				2. Line Notify (bata)
+				3. Drop down list use string
+
+		All Items: 
+		          1. RvR Test:			  		v1.0.2018.1001
+		          2. Power On/Off Test: 	  		v1.0.2018.1001
+			  3. RvR-Turn Table Test: 			v1.0.2018.1001
+			  4. Interoperability Test:	 		v1.0.2018.1001
+			  5. Throughput Test: 				v1.0.2018.1001
+			  6. Web GUI Test:
+                                - FW Upgrade/Downgrade Stress Test	v1.0.2018.1214
+			  7. USB Storage test				v1.0.2018.1221
+			  8. GUI test					v1.0.2018.1214
+			  9. Chamber Performance test			v1.0.2018.1221
+
+------------------------------------------------------------------------------------------------------------------
+
+V1.0.2018.1219 :
+	Release Date: 2018/12/19
+	Release History:
+		New Item:
+				  1. Chamber Performance test
+
+
+		Fixed Issue: 
+					None.
+
+		All Items: 
+		          1. RvR Test:			  		v1.0.2018.1001
+		          2. Power On/Off Test: 	  		v1.0.2018.1001
+				  3. RvR-Turn Table Test: 			v1.0.2018.1001
+				  4. Interoperability Test:	 		v1.0.2018.1001
+				  5. Throughput Test: 				v1.0.2018.1001
+				  6. Web GUI Test:
+                                        - FW Upgrade/Downgrade Stress Test	v1.0.2018.1214
+				  7. USB Storage test				v1.0.2018.1206
+				  8. GUI test					v1.0.2018.1214
+				  9. Chamber Performance test					v1.0.2018.1219
+
+------------------------------------------------------------------------------------------------------------------
+
+V1.1.2018.1214 :
+	Release Date: 2018/12/14
+	Release History:
+		New Item:
+				  1. GUI test
+
+
+		Fixed Issue: 
+				  1. Add Poke function
+				  2. Show log completely
+				  3. Modify logout method
+				  4. Set to default settings before each test
+				  5. Add HoldMenu function in selenium api
+				  6. Update WebGUI Script from USBStorageWebGUI.xlsx to WebGUIScript.xlsx
+				  7. Debug 1.5.20
+
+		All Items: 
+		          	  1. RvR Test:			  		v1.0.2018.1001
+		          	  2. Power On/Off Test: 	  		v1.0.2018.1001
+				  3. RvR-Turn Table Test: 			v1.0.2018.1001
+				  4. Interoperability Test:	 		v1.0.2018.1001
+				  5. Throughput Test: 				v1.0.2018.1001
+				  6. Web GUI Test:
+                                        - FW Upgrade/Downgrade Stress Test	v1.0.2018.1214
+				  7. USB Storage test				v1.0.2018.1206
+				  8. GUI test					v1.0.2018.1214
+
+------------------------------------------------------------------------------------------------------------------
+
+
+V1.0.2018.1214 :
+	Release Date: 2018/12/14
+	Release History:
+		New Item:
+				  1. Add GUI Pass/Fail Data View
+
+
+		Fixed Issue: 
+				  1. Update Fail Message on report
+				  2. Modify Test Script 
+
+		All Items: 
+		          	  1. RvR Test:			  		v1.0.2018.1001
+		          	  2. Power On/Off Test: 	  		v1.0.2018.1001
+				  3. RvR-Turn Table Test: 			v1.0.2018.1001
+				  4. Interoperability Test:	 		v1.0.2018.1001
+				  5. Throughput Test: 				v1.0.2018.1001
+				  6. Web GUI Test:
+                                        - FW Upgrade/Downgrade Stress Test	v1.0.2018.1214
+				  7. USB Storage test				v1.0.2018.1206
+
+
+------------------------------------------------------------------------------------------------------------------
+
+V1.0.2018.1210 :
+	Release Date: 2018/12/10
+	Release History:
+		New Item:
+				  No
+
+				 
+
+		Fixed Issue: 
+				  1. Cannot run upgrade step
+
+		All Items: 
+		          	  1. RvR Test:			  		v1.0.2018.1001
+		          	  2. Power On/Off Test: 	  		v1.0.2018.1001
+				  3. RvR-Turn Table Test: 			v1.0.2018.1001
+				  4. Interoperability Test:	 		v1.0.2018.1001
+				  5. Throughput Test: 				v1.0.2018.1001
+				  6. Web GUI Test:
+                                        - FW Upgrade/Downgrade Stress Test	v1.0.2018.1210
+				  7. USB Storage test				v1.0.2018.1206
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
+V1.0.2018.1207 :
+	Release Date: 2018/12/07
+	Release History:
+		New Item:
+				  1. Web GUI Test:  FW Upgrade/Downgrade Stress Test
+
+				 
+
+		Fixed Issue: 
+					
+
+		All Items: 
+		          	  1. RvR Test:			  		v1.0.2018.1001
+		          	  2. Power On/Off Test: 	  		v1.0.2018.1001
+				  3. RvR-Turn Table Test: 			v1.0.2018.1001
+				  4. Interoperability Test:	 		v1.0.2018.1001
+				  5. Throughput Test: 				v1.0.2018.1001
+				  6. Web GUI Test: 				v1.0.2018.1207
+				  7. USB Storage test				v1.0.2018.1109
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
+V1.0.2018.1206 :
+	Release Date: 2018/12/06
+	Release History:
+		New Item:
+				  
+				 
+
+		Fixed Issue: 
+				  1. OpenFileDialog add excel.xlsm
+				  2. Automatically fill steps script indexes
+				  3. Upgrade chrome driver version
+				  4. 1.5.10 longest folder name should be 244
+				  5. Adjust 1.5.12, 1.5.14 expected value
+				  6. Update USB storage partitions files
+				  7. 1.5.9 longest file name should be 251
+					
+
+		All Items: 
+		          	  1. RvR Test:			  		v1.0.2018.1001
+		          	  2. Power On/Off Test: 	  		v1.0.2018.1001
+				  3. RvR-Turn Table Test: 			v1.0.2018.1001
+				  4. Interoperability Test:	 		v1.0.2018.1001
+				  5. Throughput Test: 				v1.0.2018.1001
+				  6. Web GUI Test: 				v1.0.2018.1001
+				  7. USB Storage test				v1.0.2018.1206
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
+V1.0.2018.1127 :
+	Release Date: 2018/11/27
+	Release History:
+		New Item:
+				  
+				 
+
+		Fixed Issue: 
+				  1. Automatically choose scripts path
+				  2. Modify login method
+				  3. Anonymous login
+				  4. Create/delete folder
+				  5. Rename folder
+				  6. List directory
+				  7. Solved "Do you want to save?" problem
+				  8. Solved the issue of "Read Only caused by interrupt during loading script"
+					
+
+		All Items: 
+		          	  1. RvR Test:			  		v1.0.2018.1001
+		          	  2. Power On/Off Test: 	  		v1.0.2018.1001
+				  3. RvR-Turn Table Test: 			v1.0.2018.1001
+				  4. Interoperability Test:	 		v1.0.2018.1001
+				  5. Throughput Test: 				v1.0.2018.1001
+				  6. Web GUI Test: 				v1.0.2018.1001
+				  7. USB Storage test				v1.0.2018.1127
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
+V1.0.2018.1120 :
+	Release Date: 2018/11/20
+	Release History:
+		New Item:
+				  
+				 
+
+		Fixed Issue: 
+				  1. ExpectedValue wrong
+				  2. Final script only accepts "v"
+					
+
+		All Items: 
+		          	  1. RvR Test:			  		v1.0.2018.1001
+		          	  2. Power On/Off Test: 	  		v1.0.2018.1001
+				  3. RvR-Turn Table Test: 			v1.0.2018.1001
+				  4. Interoperability Test:	 		v1.0.2018.1001
+				  5. Throughput Test: 				v1.0.2018.1001
+				  6. Web GUI Test: 				v1.0.2018.1001
+				  7. USB Storage test				v1.0.2018.1120
+
+
+
+------------------------------------------------------------------------------------------------------------------
+
+
+V1.0.2018.1109 :
+	Release Date: 2018/11/09
+	Release History:
+		New Item:
+				  1. USB Storage test
+				 
+
+		Fixed Issue: 
+				  
+
+
+		All Items: 
+		          	  1. RvR Test:			  		v1.0.2018.1001
+		          	  2. Power On/Off Test: 	  		v1.0.2018.1001
+				  3. RvR-Turn Table Test: 			v1.0.2018.1001
+				  4. Interoperability Test:	 		v1.0.2018.1001
+				  5. Throughput Test: 				v1.0.2018.1001
+				  6. Web GUI Test: 				v1.0.2018.1001
+				  7. USB Storage test				v1.0.2018.1109
+
+
+
+------------------------------------------------------------------------------------------------------------------

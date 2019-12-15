@@ -1,0 +1,51 @@
+<ts=4>
+
+$Id: $
+
+
+************************************************************************
+***                           ATTENTION                              ***
+***                          **/^___^\**                             ***
+************************************************************************
+***  Project:                                                        ***
+***  Bootcode version:                                               ***
+***  System version:                                                 ***
+***  Previous released date:                                         ***
+***  Previous released tag:                                          ***
+***  --------------------------------------------------------------  ***
+
+<<	Items Templated Description >>
+=======================================================
+Project: 
+Date: 
+Feature: 
+Author: 
+=======================================================
+Description:
+
+Modified :
+<<	Items Templated Description >>
+
+
+
+=======================================================
+Project:Router
+Date:  2016/09/29
+Feature: RvR +Turn table Test Item, Power On/Off Test Item
+Author: Jin Wang
+=======================================================
+Description:
+1. RvR +Turn table Test item added
+
+Modified:
+1. PowerOnOffFunctionTest.cs :  sleep for power on time after relay on , then do the action once and write the test result to file.
+
+=======================================================
+Project: Router
+Date:  2016/08/16
+Feature: RvR Test Item, PowerOn/Off Test Item
+Author: Jin Wang
+=======================================================
+Description:
+1. Creating initial version.
+
