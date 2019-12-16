@@ -1,4 +1,25 @@
-V1.0.2019.1202 :
+V1.0.2019.1216 :
+	Release Date: 2019/12/16
+	Release History:
+		New Item:
+				  1. Add MR series (MR9000) Script
+
+		Fixed Issue: 
+				  None
+
+
+		All Items: 
+				  1. RvR Test:			  		v1.0.2018.1001
+				  2. Power On/Off Test: 	  		v1.0.2018.1001
+				  3. RvR-Turn Table Test: 			v1.0.2018.1001
+				  4. Interoperability Test:	 		v1.0.2018.1001
+				  5. Throughput Test: 				v1.0.2018.1001
+				  6. Web GUI Test:
+				  	- FW Upgrade/Downgrade Stress Test	v1.0.2019.1216
+				  	- GUI test				v1.0.2018.1214
+				  7. USB Storage test				v1.0.2018.1227
+
+------------------------------------------------------------------------------------------------------------------V1.0.2019.1202 :
 	Release Date: 2019/12/02
 	Release History:
 		New Item:
