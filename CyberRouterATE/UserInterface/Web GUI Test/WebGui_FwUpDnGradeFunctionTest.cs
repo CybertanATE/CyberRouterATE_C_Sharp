@@ -651,6 +651,9 @@ namespace CyberRouterATE
                     {
                         int icurStepsIndex = Convert.ToInt32(st_ReadStepsScriptDataWebGuiFwUpDnGrade[STEP_SCRIPT_STRUCT_INDEX].Index);
 
+                        if (st_ReadStepsScriptDataWebGuiFwUpDnGrade[STEP_SCRIPT_STRUCT_INDEX].Name.CompareTo("Logout") == 0)
+                            bSkipTestStep = false;
+
                         if (bSkipTestStep == false && icurStepsIndex >= iStepsStartIndex && icurStepsIndex <= iStepsStopIndex)  // iStepsStartIndex <=  icurStepsIndex <= iStepsStopIndex
                         {
                             string sStepName = st_ReadStepsScriptDataWebGuiFwUpDnGrade[STEP_SCRIPT_STRUCT_INDEX].Name;
