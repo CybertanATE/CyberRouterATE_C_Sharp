@@ -765,6 +765,7 @@ namespace CyberRouterATE
                         //WriteStepTestResultToArray();        /////////////////////////////////// Write Step Test Result
                     }
 
+                    Thread.Sleep(10000);
                     ClodeWebDriver();  //------------- FW Stress 每次 Up/Downgrade 完都要 Close Web Driver
                     WriteFinalTestResultToReport();        /////////////////////////////////// Write Final Test Result
                 }
