@@ -413,6 +413,28 @@ namespace CyberRouterATE
 
         }
 
+        private void InitialTestItemResult()
+        {
+            for (int SCRIPT_INDEX = 0; SCRIPT_INDEX < st_ReadTestItemsScriptWebGuiFwUpDnGrade.Length; SCRIPT_INDEX++)
+            {
+                st_ReadTestItemsScriptWebGuiFwUpDnGrade[SCRIPT_INDEX].TestResult = "";
+                st_ReadTestItemsScriptWebGuiFwUpDnGrade[SCRIPT_INDEX].Comment    = "";
+                st_ReadTestItemsScriptWebGuiFwUpDnGrade[SCRIPT_INDEX].Log        = "";
+                st_ReadTestItemsScriptWebGuiFwUpDnGrade[SCRIPT_INDEX].ScreenShotPath = "";
+            }
+        }
+        
+        private void InitialTestStepResult()
+        {
+            for (int SCRIPT_INDEX = 0; SCRIPT_INDEX < st_ReadStepsScriptDataWebGuiFwUpDnGrade.Length; SCRIPT_INDEX++)
+            {
+                st_ReadStepsScriptDataWebGuiFwUpDnGrade[SCRIPT_INDEX].GetValue   = "";
+                st_ReadStepsScriptDataWebGuiFwUpDnGrade[SCRIPT_INDEX].TestResult = "";
+                st_ReadStepsScriptDataWebGuiFwUpDnGrade[SCRIPT_INDEX].Note       = "";
+            }
+        }
+
+
         //private bool WebDriverInitial()
         //{
         //    if (cs_DutFwGuiBrowser == null)
@@ -554,6 +576,10 @@ namespace CyberRouterATE
                 st_ReadStepsScriptDataWebGuiFwUpDnGrade[STEP_SCRIPT_STRUCT_INDEX].TestResult = "FAIL";
                 st_ReadStepsScriptDataWebGuiFwUpDnGrade[STEP_SCRIPT_STRUCT_INDEX].Note = ScriptPara.Note;
             }
+            //else if (ScriptPara.TestResult.CompareTo("PASS") == 0)
+            //{
+            //    st_ReadStepsScriptDataWebGuiFwUpDnGrade[STEP_SCRIPT_STRUCT_INDEX].TestResult = "PASS";
+           // }
         }
         
         private void DoWebGuiFwUpDnGradeFunctionTest()
@@ -619,7 +645,8 @@ namespace CyberRouterATE
                         Thread.Sleep(5000);
                     }
                 }
-                
+
+                InitialTestItemResult();
                 
                 for (TEST_ITEMS_STRUCT_INDEX = 0; TEST_ITEMS_STRUCT_INDEX < st_ReadTestItemsScriptWebGuiFwUpDnGrade.Length; TEST_ITEMS_STRUCT_INDEX++)                                            //------------------ Final Script Array-----------------//
                 {
@@ -638,6 +665,7 @@ namespace CyberRouterATE
 
                     s_OriginalFWver = string.Empty;
                     s_UpdatedFWver = string.Empty;
+                    InitialTestStepResult();
 
                     int iStepsStartIndex = Convert.ToInt32(st_ReadTestItemsScriptWebGuiFwUpDnGrade[TEST_ITEMS_STRUCT_INDEX].StartIndex);
                     int iStepsStopIndex = Convert.ToInt32(st_ReadTestItemsScriptWebGuiFwUpDnGrade[TEST_ITEMS_STRUCT_INDEX].StopIndex);
@@ -656,9 +684,10 @@ namespace CyberRouterATE
 
                         if (bSkipTestStep == false && icurStepsIndex >= iStepsStartIndex && icurStepsIndex <= iStepsStopIndex)  // iStepsStartIndex <=  icurStepsIndex <= iStepsStopIndex
                         {
-                            string sStepName = st_ReadStepsScriptDataWebGuiFwUpDnGrade[STEP_SCRIPT_STRUCT_INDEX].Name;
+                            string sStepIndex = st_ReadStepsScriptDataWebGuiFwUpDnGrade[STEP_SCRIPT_STRUCT_INDEX].Index;
+                            string sStepName  = st_ReadStepsScriptDataWebGuiFwUpDnGrade[STEP_SCRIPT_STRUCT_INDEX].Name;
 
-                            sInfo = string.Format("***    <Test Steps>: {0}", sStepName);
+                            sInfo = string.Format("***    <Test Steps {0}>: {1}", sStepIndex, sStepName);
                             Invoke(new SetTextCallBack(SetText), new object[] { "", txtWebGuiFwUpDnGradeFunctionTestInformation });
                             Invoke(new SetTextCallBack(SetText), new object[] { sInfo, txtWebGuiFwUpDnGradeFunctionTestInformation });
 
@@ -798,7 +827,9 @@ namespace CyberRouterATE
             ScriptPara.ExpectedValue = st_ReadDeviceTestScriptDataWebGuiFwUpDnGrade[DEVICE_TEST_SCRIPT_STRUCT_INDEX].WriteExpectedValue;
             ScriptPara.URL = sLoginURL + st_ReadDeviceTestScriptDataWebGuiFwUpDnGrade[DEVICE_TEST_SCRIPT_STRUCT_INDEX].WriteExpectedValue;
             ScriptPara.TestTimeOut = st_ReadDeviceTestScriptDataWebGuiFwUpDnGrade[DEVICE_TEST_SCRIPT_STRUCT_INDEX].TestTimeOut;
-            ScriptPara.Note = string.Empty;
+            ScriptPara.GetValue   = string.Empty;
+            ScriptPara.TestResult = string.Empty;
+            ScriptPara.Note       = string.Empty;
 
 
             strInfo = string.Format("**      [WebGUI Index]: {0}    [Action]:{1}    [Action Name]:{2}    ", ScriptPara.Index, ScriptPara.Action, ScriptPara.ActionName);
@@ -927,7 +958,7 @@ namespace CyberRouterATE
                     else if (s_UpdatedFWver.CompareTo(s_OriginalFWver) == 0)
                     {
                         ScriptPara.TestResult = "FAIL";
-                        strInfo = string.Format("-----> Original FW version:{0}\nUpdated FW version:{1}", s_OriginalFWver, s_UpdatedFWver);
+                        strInfo = string.Format("-----> Original FW version:{0}\n        Updated FW version:{1}", s_OriginalFWver, s_UpdatedFWver);
                         ScriptPara.Note = strInfo;
                     }
                     else
@@ -937,6 +968,7 @@ namespace CyberRouterATE
                         ScriptPara.Note = strInfo;
                     }
                 }
+                st_ReadStepsScriptDataWebGuiFwUpDnGrade[STEP_SCRIPT_STRUCT_INDEX].GetValue = ScriptPara.GetValue;
                 Invoke(new SetTextCallBack(SetText), new object[] { strInfo, txtWebGuiFwUpDnGradeFunctionTestInformation });
                 
             }
