@@ -12347,7 +12347,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "RouterTestMain";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "CyberRouterATE v#.#.###### - Copyright(c) 2019 CyberTan";
+            this.Text = "CyberRouterATE v#.#.###### - Copyright(c) 2020 CyberTan";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RouterTestMain_FormClosing);
             this.Load += new System.EventHandler(this.OnLoad);
             this.menuStrip1.ResumeLayout(false);

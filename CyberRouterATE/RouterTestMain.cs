@@ -74,7 +74,7 @@ namespace CyberRouterATE
             /* Displays copyright and version number in titlebar */
             Assembly assembly = Assembly.GetExecutingAssembly();
             FileVersionInfo fvi = FileVersionInfo.GetVersionInfo(assembly.Location);
-            this.Text = String.Format("CyberRouterATE v{0} - Copyright(c) 2014-2019 CyberTan", fvi.FileVersion);
+            this.Text = String.Format("CyberRouterATE v{0} - Copyright(c) 2014-2020 CyberTan", fvi.FileVersion);
 
             /* Pre-create subfolder if report and config folders are not exist */
             PreCreateSubFolder();
