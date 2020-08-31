@@ -1,0 +1,2 @@
+C:
+shutdown -h

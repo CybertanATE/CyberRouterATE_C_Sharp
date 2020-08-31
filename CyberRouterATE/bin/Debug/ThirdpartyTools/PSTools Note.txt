@@ -1,0 +1,18 @@
+
+本機端設定：
+準備好 shutdown.bat
+
+
+遠端電腦設定:
+0. 一定要設定登入密碼
+1. "開啟"防火牆 (不開啟也可)
+2. 系統管理員權限下cmd, 開放Win10遠端登入權限:
+   reg add HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\system /v LocalAccountTokenFilterPolicy /t REG_DWORD /d 1 /f
+
+
+
+
+指令 (將本機端"shutdown.bat"檔案 copy到遠端電腦執行)：
+chcp 65001
+psexec \\192.168.1.1 -u "Aspire E15" -p "123" -c -f C:\tmpFile\shutdown.bat
+       (遠端電腦IP)       (遠端電腦帳號密碼)          (執行檔在本機端路徑)
