@@ -55,6 +55,16 @@ namespace CyberRouterATE
         public RouterTestMain()
         {
             InitializeComponent();
+
+            //--- Write File Example ---//
+            //string DebugFilePath = System.Windows.Forms.Application.StartupPath + @"\DebugMessage.txt";
+            //System.IO.StreamWriter WriteDebugMsg;
+            //WriteDebugMsg = new System.IO.StreamWriter(DebugFilePath);
+            //WriteDebugMsg.Write("FFFFFFFFFFFFFFFF");  //Write()     不換行
+            //WriteDebugMsg.WriteLine("       TTTT");   //WriteLine() 會換行
+            //WriteDebugMsg.WriteLine("Test12345");
+            //WriteDebugMsg.Close();
+
         }
 
         /// <summary>
