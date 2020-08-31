@@ -35,7 +35,7 @@ namespace CyberRouterATE
         public void SetupPowerOnOffDataGridView()
         {
             
-            dgvPowerOnOffTestConditionData.ColumnCount = 11;
+            dgvPowerOnOffTestConditionData.ColumnCount = 12;
             dgvPowerOnOffTestConditionData.ColumnHeadersDefaultCellStyle.BackColor = Color.Navy;
             dgvPowerOnOffTestConditionData.ColumnHeadersDefaultCellStyle.ForeColor = Color.White;
 
@@ -48,29 +48,31 @@ namespace CyberRouterATE
             dgvPowerOnOffTestConditionData.Columns[2].Name = "Action 1";
             dgvPowerOnOffTestConditionData.Columns[3].Name = "Action 2";
             dgvPowerOnOffTestConditionData.Columns[4].Name = "Sleep Timer";
-            dgvPowerOnOffTestConditionData.Columns[5].Name = "Parameter 1";
-            dgvPowerOnOffTestConditionData.Columns[6].Name = "Login ID";
-            dgvPowerOnOffTestConditionData.Columns[7].Name = "Login PW";
-            dgvPowerOnOffTestConditionData.Columns[8].Name = "Parameter 2";
-            dgvPowerOnOffTestConditionData.Columns[9].Name = "Power On Time";
-            dgvPowerOnOffTestConditionData.Columns[10].Name = "Power Off Time";
+            dgvPowerOnOffTestConditionData.Columns[5].Name = "Action 3";
+            dgvPowerOnOffTestConditionData.Columns[6].Name = "Parameter 1";
+            dgvPowerOnOffTestConditionData.Columns[7].Name = "Login ID";
+            dgvPowerOnOffTestConditionData.Columns[8].Name = "Login PW";
+            dgvPowerOnOffTestConditionData.Columns[9].Name = "Parameter 2";
+            dgvPowerOnOffTestConditionData.Columns[10].Name = "Power On Time";
+            dgvPowerOnOffTestConditionData.Columns[11].Name = "Power Off Time";
 
             dgvPowerOnOffTestConditionData.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dgvPowerOnOffTestConditionData.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
-            dgvPowerOnOffTestConditionData.ColumnHeadersDefaultCellStyle.WrapMode = DataGridViewTriState.False; //標題列換行, true -換行, false-不換行
+            dgvPowerOnOffTestConditionData.ColumnHeadersDefaultCellStyle.WrapMode = DataGridViewTriState.True; //標題列換行, true -換行, false-不換行
             dgvPowerOnOffTestConditionData.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;//標題列置中
 
-            dgvPowerOnOffTestConditionData.Columns[0].Width = 100;
-            dgvPowerOnOffTestConditionData.Columns[1].Width = 120;
-            dgvPowerOnOffTestConditionData.Columns[2].Width = 250;
-            dgvPowerOnOffTestConditionData.Columns[3].Width = 250;
+            dgvPowerOnOffTestConditionData.Columns[0].Width = 80;
+            dgvPowerOnOffTestConditionData.Columns[1].Width = 100;
+            dgvPowerOnOffTestConditionData.Columns[2].Width = 200;
+            dgvPowerOnOffTestConditionData.Columns[3].Width = 200;
             dgvPowerOnOffTestConditionData.Columns[4].Width = 100;
-            dgvPowerOnOffTestConditionData.Columns[5].Width = 150;
-            dgvPowerOnOffTestConditionData.Columns[6].Width = 200;
+            dgvPowerOnOffTestConditionData.Columns[5].Width = 200;
+            dgvPowerOnOffTestConditionData.Columns[6].Width = 150;
             dgvPowerOnOffTestConditionData.Columns[7].Width = 200;
-            dgvPowerOnOffTestConditionData.Columns[8].Width = 150;
-            dgvPowerOnOffTestConditionData.Columns[9].Width = 120;
-            dgvPowerOnOffTestConditionData.Columns[10].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dgvPowerOnOffTestConditionData.Columns[8].Width = 200;
+            dgvPowerOnOffTestConditionData.Columns[9].Width = 150;
+            dgvPowerOnOffTestConditionData.Columns[10].Width = 120;
+            dgvPowerOnOffTestConditionData.Columns[11].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
 
             dgvPowerOnOffTestConditionData.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
@@ -98,20 +100,50 @@ namespace CyberRouterATE
                 /* Reset the name of btn_TestCondition_Edit as Edit words. */
                 btnPowerOnOffTestConditionEditSetting.Text = "Edit";
             }
-                        
+
+            string Powerport    = nudPowerOnOffTestConditionPowerPort.Value.ToString();
+            string ModelName    = txtPowerOnOffTestConditionModelName.Text;
+            string Action1      = cboxPowerOnOffTestConditionAction1.SelectedItem.ToString();
+            string Action2      = cboxPowerOnOffTestConditionAction2.SelectedItem.ToString();
+            string Action3      = cboxPowerOnOffTestConditionAction3.SelectedItem.ToString();
+            string SleepTimer   = nudPowerOnOffTestConditionSleepTimer.Value.ToString();
+            string parameter1   = txtPowerOnOffTestConditionParameter1.Text;
+            string p1LoginID    = txtPowerOnOffTestConditionLoginID.Text;
+            string p1LoginPW    = txtPowerOnOffTestConditionLoginPW.Text;
+            string parameter2   = txtPowerOnOffTestConditionParameter2.Text;
+            string PowerOnTime  = nudPowerOnOffTestConditionPowerOnTime.Value.ToString();
+            string PowerOffTime = nudPowerOnOffTestConditionPowerOffTime.Value.ToString();
+
+            string SSD1 = cboxPowerOnOffTestConditionSSD1.SelectedItem.ToString();
+            string SSD2 = cboxPowerOnOffTestConditionSSD2.SelectedItem.ToString();
+            string SSD3 = cboxPowerOnOffTestConditionSSD3.SelectedItem.ToString();
+
+
+            if (Action3 == "Check SSD")
+            {
+                if (SSD1 != "None")
+                    Action3 = Action3 + @" \" + SSD1;
+                if (SSD2 != "None")
+                    Action3 = Action3 + @" \" + SSD2;
+                if (SSD3 != "None")
+                    Action3 = Action3 + @" \" + SSD3;
+            }
+
+
             /* Add data to datagridview */
             string[] data = new string[] {
-                nudPowerOnOffTestConditionPowerPort.Value.ToString(),       //Power port
-                (txtPowerOnOffTestConditionModelName.Text == "")? "X":txtPowerOnOffTestConditionModelName.Text,   //Model Name
-                cboxPowerOnOffTestConditionAction1.SelectedItem.ToString(), //Action1
-                cboxPowerOnOffTestConditionAction2.SelectedItem.ToString(), //Action2
-                nudPowerOnOffTestConditionSleepTimer.Value.ToString(),      //SleepTimer
-                (txtPowerOnOffTestConditionParameter1.Text =="")? "X":txtPowerOnOffTestConditionParameter1.Text,  //parameter 1
-                txtPowerOnOffTestConditionLoginID.Text,  //parameter 1 LoginID
-                txtPowerOnOffTestConditionLoginPW.Text,  //parameter 1 LoginPW
-                (txtPowerOnOffTestConditionParameter2.Text == "")? "X":txtPowerOnOffTestConditionParameter2.Text, //Parameter 2
-                nudPowerOnOffTestConditionPowerOnTime.Value.ToString(),     //Power on time
-                nudPowerOnOffTestConditionPowerOffTime.Value.ToString()};   //Power off time
+                Powerport,
+                (ModelName == "")? "X":ModelName,
+                Action1,
+                Action2,
+                SleepTimer,
+                Action3,
+                (parameter1 == "")? "X":parameter1,
+                p1LoginID,  //parameter 1 LoginID
+                p1LoginPW,  //parameter 1 LoginPW
+                (parameter2 == "")? "X":parameter2,
+                PowerOnTime,
+                PowerOffTime};
 
             //string[] data = new string[] { "1", "2", "3", "4", "5", "6", "7" };
                 //"1", //Power port
@@ -240,7 +272,7 @@ namespace CyberRouterATE
         {
             // ToDo: Needs to verify which test item is to be selected..
 
-            string[,] rowdata = new string[dgvPowerOnOffTestConditionData.RowCount - 1, 11];
+            string[,] rowdata = new string[dgvPowerOnOffTestConditionData.RowCount - 1, dgvPowerOnOffTestConditionData.ColumnCount];
 
             XmlWriterSettings settings = new XmlWriterSettings();
             settings.Indent = true;
@@ -259,17 +291,18 @@ namespace CyberRouterATE
             {
                 writer.WriteStartElement("Condition_" + (i + 1).ToString());
 
-                writer.WriteElementString("Power_Port", rowdata[i, 0]     = dgvPowerOnOffTestConditionData.Rows[i].Cells[0].Value.ToString());
-                writer.WriteElementString("Model_Name", rowdata[i, 1]     = dgvPowerOnOffTestConditionData.Rows[i].Cells[1].Value.ToString());
-                writer.WriteElementString("Action", rowdata[i, 2]         = dgvPowerOnOffTestConditionData.Rows[i].Cells[2].Value.ToString());
-                writer.WriteElementString("Action2", rowdata[i, 3]        = dgvPowerOnOffTestConditionData.Rows[i].Cells[3].Value.ToString());
-                writer.WriteElementString("Sleep_Timer", rowdata[i, 4]    = dgvPowerOnOffTestConditionData.Rows[i].Cells[4].Value.ToString());
-                writer.WriteElementString("Parameter_1", rowdata[i, 5]    = dgvPowerOnOffTestConditionData.Rows[i].Cells[5].Value.ToString());
-                writer.WriteElementString("P1_LoginID", rowdata[i, 6]     = dgvPowerOnOffTestConditionData.Rows[i].Cells[6].Value.ToString());
-                writer.WriteElementString("P1_LoginPW", rowdata[i, 7]     = dgvPowerOnOffTestConditionData.Rows[i].Cells[7].Value.ToString());
-                writer.WriteElementString("Parameter_2", rowdata[i, 8]    = dgvPowerOnOffTestConditionData.Rows[i].Cells[8].Value.ToString());
-                writer.WriteElementString("Power_On_Time", rowdata[i, 9]  = dgvPowerOnOffTestConditionData.Rows[i].Cells[9].Value.ToString());
-                writer.WriteElementString("Power_Off_Time", rowdata[i, 10] = dgvPowerOnOffTestConditionData.Rows[i].Cells[10].Value.ToString());
+                writer.WriteElementString("Power_Port", rowdata[i, 0]      = dgvPowerOnOffTestConditionData.Rows[i].Cells[0].Value.ToString());
+                writer.WriteElementString("Model_Name", rowdata[i, 1]      = dgvPowerOnOffTestConditionData.Rows[i].Cells[1].Value.ToString());
+                writer.WriteElementString("Action1", rowdata[i, 2]         = dgvPowerOnOffTestConditionData.Rows[i].Cells[2].Value.ToString());
+                writer.WriteElementString("Action2", rowdata[i, 3]         = dgvPowerOnOffTestConditionData.Rows[i].Cells[3].Value.ToString());
+                writer.WriteElementString("Sleep_Timer", rowdata[i, 4]     = dgvPowerOnOffTestConditionData.Rows[i].Cells[4].Value.ToString());
+                writer.WriteElementString("Action3", rowdata[i, 5]         = dgvPowerOnOffTestConditionData.Rows[i].Cells[5].Value.ToString());
+                writer.WriteElementString("Parameter_1", rowdata[i, 6]     = dgvPowerOnOffTestConditionData.Rows[i].Cells[6].Value.ToString());
+                writer.WriteElementString("P1_LoginID", rowdata[i, 7]      = dgvPowerOnOffTestConditionData.Rows[i].Cells[7].Value.ToString());
+                writer.WriteElementString("P1_LoginPW", rowdata[i, 8]      = dgvPowerOnOffTestConditionData.Rows[i].Cells[8].Value.ToString());
+                writer.WriteElementString("Parameter_2", rowdata[i, 9]     = dgvPowerOnOffTestConditionData.Rows[i].Cells[9].Value.ToString());
+                writer.WriteElementString("Power_On_Time", rowdata[i, 10]   = dgvPowerOnOffTestConditionData.Rows[i].Cells[10].Value.ToString());
+                writer.WriteElementString("Power_Off_Time", rowdata[i, 11] = dgvPowerOnOffTestConditionData.Rows[i].Cells[11].Value.ToString());
 
                 writer.WriteEndElement();
             }
@@ -328,9 +361,10 @@ namespace CyberRouterATE
                 {
                     string PowerPort = nodeTestCondition.SelectSingleNode("Power_Port").InnerText;
                     string ModelName = nodeTestCondition.SelectSingleNode("Model_Name").InnerText;
-                    string Action = nodeTestCondition.SelectSingleNode("Action").InnerText;
+                    string Action1 = nodeTestCondition.SelectSingleNode("Action1").InnerText;
                     string Action2 = nodeTestCondition.SelectSingleNode("Action2").InnerText;
                     string SleepTimer = nodeTestCondition.SelectSingleNode("Sleep_Timer").InnerText;
+                    string Action3 = nodeTestCondition.SelectSingleNode("Action3").InnerText;
                     string Parameter1 = nodeTestCondition.SelectSingleNode("Parameter_1").InnerText;
                     string P1_LoginID = nodeTestCondition.SelectSingleNode("P1_LoginID").InnerText;
                     string P1_LoginPW = nodeTestCondition.SelectSingleNode("P1_LoginPW").InnerText;
@@ -340,9 +374,10 @@ namespace CyberRouterATE
 
                     Debug.WriteLine("Power_Port: " + PowerPort);
                     Debug.WriteLine("Model_Name: " + ModelName);
-                    Debug.WriteLine("Action: " + Action);
+                    Debug.WriteLine("Action1: " + Action1);
                     Debug.WriteLine("Action2: " + Action2);
-                    Debug.WriteLine("Sleep_Timer: " + Action2);
+                    Debug.WriteLine("Sleep_Timer: " + SleepTimer);
+                    Debug.WriteLine("Action3: " + Action3);
                     Debug.WriteLine("Parameter_1: " + Parameter1);
                     Debug.WriteLine("P1_LoginID: " + P1_LoginID);
                     Debug.WriteLine("P1_LoginPW: " + P1_LoginPW);
@@ -350,7 +385,7 @@ namespace CyberRouterATE
                     Debug.WriteLine("Power_On_Time: " + PowerOnTime);
                     Debug.WriteLine("Power_Off_Time: " + PowerOffTime);
 
-                    string[] data = new string[] { PowerPort, ModelName, Action, Action2, SleepTimer, Parameter1, P1_LoginID, P1_LoginPW, Parameter2, PowerOnTime, PowerOffTime };
+                    string[] data = new string[] { PowerPort, ModelName, Action1, Action2, SleepTimer, Action3, Parameter1, P1_LoginID, P1_LoginPW, Parameter2, PowerOnTime, PowerOffTime };
                     dgvPowerOnOffTestConditionData.Rows.Add(data);
                 }
                 catch (Exception ex)

@@ -66,6 +66,12 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle35 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle36 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RouterTestMain));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle37 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle38 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle39 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle40 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle41 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle42 = new System.Windows.Forms.DataGridViewCellStyle();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.saveConfigToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -75,6 +81,7 @@
             this.itemToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rvRTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.powerOnOffTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.pxZigbeePowerOnOffTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.rvRTurnTableTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.interOperabilityToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.throughputTestToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -336,6 +343,14 @@
             this.label46 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.label159 = new System.Windows.Forms.Label();
+            this.label158 = new System.Windows.Forms.Label();
+            this.label157 = new System.Windows.Forms.Label();
+            this.cboxPowerOnOffTestConditionSSD3 = new System.Windows.Forms.ComboBox();
+            this.cboxPowerOnOffTestConditionSSD2 = new System.Windows.Forms.ComboBox();
+            this.cboxPowerOnOffTestConditionSSD1 = new System.Windows.Forms.ComboBox();
+            this.label156 = new System.Windows.Forms.Label();
+            this.cboxPowerOnOffTestConditionAction3 = new System.Windows.Forms.ComboBox();
             this.txtPowerOnOffTestConditionLoginPW = new System.Windows.Forms.TextBox();
             this.label155 = new System.Windows.Forms.Label();
             this.txtPowerOnOffTestConditionLoginID = new System.Windows.Forms.TextBox();
@@ -958,6 +973,58 @@
             this.label144 = new System.Windows.Forms.Label();
             this.SallyTestPage = new System.Windows.Forms.TabPage();
             this.btnSeleniumTest = new System.Windows.Forms.Button();
+            this.PXzigbeePowerOnOff_tabControl = new System.Windows.Forms.TabControl();
+            this.tp_PXzigbeePowerOnOffTestCondition = new System.Windows.Forms.TabPage();
+            this.labelPXzigbeePowerOnOffTestConditionCMD = new System.Windows.Forms.Label();
+            this.label323 = new System.Windows.Forms.Label();
+            this.gbox_PXzigbeePowerOnOffTestConditionDeviceSetting = new System.Windows.Forms.GroupBox();
+            this.label314 = new System.Windows.Forms.Label();
+            this.nudPXzigbeePowerOnOffTestConditionAction4SleepTimer = new System.Windows.Forms.NumericUpDown();
+            this.label318 = new System.Windows.Forms.Label();
+            this.label324 = new System.Windows.Forms.Label();
+            this.cboxPXzigbeePowerOnOffTestConditionAction4 = new System.Windows.Forms.ComboBox();
+            this.label304 = new System.Windows.Forms.Label();
+            this.nudPXzigbeePowerOnOffTestConditionAction3SleepTimer = new System.Windows.Forms.NumericUpDown();
+            this.label305 = new System.Windows.Forms.Label();
+            this.label313 = new System.Windows.Forms.Label();
+            this.cboxPXzigbeePowerOnOffTestConditionAction3 = new System.Windows.Forms.ComboBox();
+            this.label301 = new System.Windows.Forms.Label();
+            this.nudPXzigbeePowerOnOffTestConditionAction2SleepTimer = new System.Windows.Forms.NumericUpDown();
+            this.label302 = new System.Windows.Forms.Label();
+            this.label303 = new System.Windows.Forms.Label();
+            this.cboxPXzigbeePowerOnOffTestConditionAction2 = new System.Windows.Forms.ComboBox();
+            this.labelPXzigbeePowerOnOffTestConditionExecutionStep = new System.Windows.Forms.Label();
+            this.label326 = new System.Windows.Forms.Label();
+            this.nudPXzigbeePowerOnOffTestConditionAction1SleepTimer = new System.Windows.Forms.NumericUpDown();
+            this.label327 = new System.Windows.Forms.Label();
+            this.txtPXzigbeePowerOnOffTestConditionMqttCmdPath = new System.Windows.Forms.TextBox();
+            this.label312 = new System.Windows.Forms.Label();
+            this.txtPXzigbeePowerOnOffTestConditionNodeID = new System.Windows.Forms.TextBox();
+            this.label307 = new System.Windows.Forms.Label();
+            this.txtPXzigbeePowerOnOffTestConditionModelName = new System.Windows.Forms.TextBox();
+            this.label306 = new System.Windows.Forms.Label();
+            this.txtPXzigbeePowerOnOffTestConditionIP = new System.Windows.Forms.TextBox();
+            this.label308 = new System.Windows.Forms.Label();
+            this.label309 = new System.Windows.Forms.Label();
+            this.cboxPXzigbeePowerOnOffTestConditionAction1 = new System.Windows.Forms.ComboBox();
+            this.btnPXzigbeePowerOnOffTestConditionLoadSetting = new System.Windows.Forms.Button();
+            this.btnPXzigbeePowerOnOffTestConditionSaveSetting = new System.Windows.Forms.Button();
+            this.btnPXzigbeePowerOnOffTestConditionEditSetting = new System.Windows.Forms.Button();
+            this.btnPXzigbeePowerOnOffTestConditionAddSetting = new System.Windows.Forms.Button();
+            this.dgvPXzigbeePowerOnOffTestConditionData = new System.Windows.Forms.DataGridView();
+            this.tp_PXzigbeePowerOnOffFunctionTest = new System.Windows.Forms.TabPage();
+            this.groupBox49 = new System.Windows.Forms.GroupBox();
+            this.dgvPXzigbeePowerOnOffFunctionTestStatus = new System.Windows.Forms.DataGridView();
+            this.gbox_PXzigbeePowerOnOffFunctionTestSetting = new System.Windows.Forms.GroupBox();
+            this.nudPXzigbeePowerOnOffFunctionTestTimes = new System.Windows.Forms.NumericUpDown();
+            this.label320 = new System.Windows.Forms.Label();
+            this.txtPXzigbeePowerOnOffFunctionTestName = new System.Windows.Forms.TextBox();
+            this.label321 = new System.Windows.Forms.Label();
+            this.cboxPXzigbeePowerOnOffFunctionTestStopWhenTestFailed = new System.Windows.Forms.CheckBox();
+            this.btnPXzigbeePowerOnOffFunctionTestRun = new System.Windows.Forms.Button();
+            this.groupBox76 = new System.Windows.Forms.GroupBox();
+            this.txtPXzigbeePowerOnOffFunctionTestInformation = new System.Windows.Forms.TextBox();
+            this.label322 = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.RvRTest_tabControl.SuspendLayout();
             this.tp_RvRTestCondition.SuspendLayout();
@@ -1183,6 +1250,20 @@
             this.groupBox54.SuspendLayout();
             this.gbox_ModelWebGuiFwUpDnGrade.SuspendLayout();
             this.SallyTestPage.SuspendLayout();
+            this.PXzigbeePowerOnOff_tabControl.SuspendLayout();
+            this.tp_PXzigbeePowerOnOffTestCondition.SuspendLayout();
+            this.gbox_PXzigbeePowerOnOffTestConditionDeviceSetting.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPXzigbeePowerOnOffTestConditionAction4SleepTimer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPXzigbeePowerOnOffTestConditionAction3SleepTimer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPXzigbeePowerOnOffTestConditionAction2SleepTimer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPXzigbeePowerOnOffTestConditionAction1SleepTimer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPXzigbeePowerOnOffTestConditionData)).BeginInit();
+            this.tp_PXzigbeePowerOnOffFunctionTest.SuspendLayout();
+            this.groupBox49.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPXzigbeePowerOnOffFunctionTestStatus)).BeginInit();
+            this.gbox_PXzigbeePowerOnOffFunctionTestSetting.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPXzigbeePowerOnOffFunctionTestTimes)).BeginInit();
+            this.groupBox76.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -1245,6 +1326,7 @@
             this.itemToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.rvRTestToolStripMenuItem,
             this.powerOnOffTestToolStripMenuItem,
+            this.pxZigbeePowerOnOffTestToolStripMenuItem,
             this.rvRTurnTableTestToolStripMenuItem,
             this.interOperabilityToolStripMenuItem,
             this.throughputTestToolStripMenuItem,
@@ -1260,36 +1342,48 @@
             // rvRTestToolStripMenuItem
             // 
             this.rvRTestToolStripMenuItem.Name = "rvRTestToolStripMenuItem";
-            this.rvRTestToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
+            this.rvRTestToolStripMenuItem.Size = new System.Drawing.Size(269, 22);
             this.rvRTestToolStripMenuItem.Text = "RvR Test";
+            this.rvRTestToolStripMenuItem.Visible = false;
             this.rvRTestToolStripMenuItem.Click += new System.EventHandler(this.rvRTestToolStripMenuItem_Click);
             // 
             // powerOnOffTestToolStripMenuItem
             // 
             this.powerOnOffTestToolStripMenuItem.Name = "powerOnOffTestToolStripMenuItem";
-            this.powerOnOffTestToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
+            this.powerOnOffTestToolStripMenuItem.Size = new System.Drawing.Size(269, 22);
             this.powerOnOffTestToolStripMenuItem.Text = "Power On/Off Test";
+            this.powerOnOffTestToolStripMenuItem.Visible = false;
             this.powerOnOffTestToolStripMenuItem.Click += new System.EventHandler(this.powerOnOffTestToolStripMenuItem_Click);
+            // 
+            // pxZigbeePowerOnOffTestToolStripMenuItem
+            // 
+            this.pxZigbeePowerOnOffTestToolStripMenuItem.Name = "pxZigbeePowerOnOffTestToolStripMenuItem";
+            this.pxZigbeePowerOnOffTestToolStripMenuItem.Size = new System.Drawing.Size(269, 22);
+            this.pxZigbeePowerOnOffTestToolStripMenuItem.Text = "PX zigbee Power On/Off Test";
+            this.pxZigbeePowerOnOffTestToolStripMenuItem.Click += new System.EventHandler(this.pxZigbeePowerOnOffTestToolStripMenuItem_Click);
             // 
             // rvRTurnTableTestToolStripMenuItem
             // 
             this.rvRTurnTableTestToolStripMenuItem.Name = "rvRTurnTableTestToolStripMenuItem";
-            this.rvRTurnTableTestToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
+            this.rvRTurnTableTestToolStripMenuItem.Size = new System.Drawing.Size(269, 22);
             this.rvRTurnTableTestToolStripMenuItem.Text = "RvR-Turn Table Test";
+            this.rvRTurnTableTestToolStripMenuItem.Visible = false;
             this.rvRTurnTableTestToolStripMenuItem.Click += new System.EventHandler(this.rvRTurnTableTestToolStripMenuItem_Click);
             // 
             // interOperabilityToolStripMenuItem
             // 
             this.interOperabilityToolStripMenuItem.Name = "interOperabilityToolStripMenuItem";
-            this.interOperabilityToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
+            this.interOperabilityToolStripMenuItem.Size = new System.Drawing.Size(269, 22);
             this.interOperabilityToolStripMenuItem.Text = "Interoperability";
+            this.interOperabilityToolStripMenuItem.Visible = false;
             this.interOperabilityToolStripMenuItem.Click += new System.EventHandler(this.interOperabilityToolStripMenuItem_Click);
             // 
             // throughputTestToolStripMenuItem
             // 
             this.throughputTestToolStripMenuItem.Name = "throughputTestToolStripMenuItem";
-            this.throughputTestToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
+            this.throughputTestToolStripMenuItem.Size = new System.Drawing.Size(269, 22);
             this.throughputTestToolStripMenuItem.Text = "ThroughputTest";
+            this.throughputTestToolStripMenuItem.Visible = false;
             this.throughputTestToolStripMenuItem.Click += new System.EventHandler(this.throughputTestToolStripMenuItem_Click);
             // 
             // webGUITestToolStripMenuItem
@@ -1298,8 +1392,9 @@
             this.fWUpgradeDowngradeTestToolStripMenuItem,
             this.gUITestToolStripMenuItem});
             this.webGUITestToolStripMenuItem.Name = "webGUITestToolStripMenuItem";
-            this.webGUITestToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
+            this.webGUITestToolStripMenuItem.Size = new System.Drawing.Size(269, 22);
             this.webGUITestToolStripMenuItem.Text = "Web GUI Test";
+            this.webGUITestToolStripMenuItem.Visible = false;
             // 
             // fWUpgradeDowngradeTestToolStripMenuItem
             // 
@@ -1318,14 +1413,15 @@
             // USBStorageTestToolStripMenuItem
             // 
             this.USBStorageTestToolStripMenuItem.Name = "USBStorageTestToolStripMenuItem";
-            this.USBStorageTestToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
+            this.USBStorageTestToolStripMenuItem.Size = new System.Drawing.Size(269, 22);
             this.USBStorageTestToolStripMenuItem.Text = "USB Storage Test";
+            this.USBStorageTestToolStripMenuItem.Visible = false;
             this.USBStorageTestToolStripMenuItem.Click += new System.EventHandler(this.USBStorageTestToolStripMenuItem_Click);
             // 
             // GuestNetworkTestToolStripMenuItem
             // 
             this.GuestNetworkTestToolStripMenuItem.Name = "GuestNetworkTestToolStripMenuItem";
-            this.GuestNetworkTestToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
+            this.GuestNetworkTestToolStripMenuItem.Size = new System.Drawing.Size(269, 22);
             this.GuestNetworkTestToolStripMenuItem.Text = "Guest Network Test";
             this.GuestNetworkTestToolStripMenuItem.Visible = false;
             this.GuestNetworkTestToolStripMenuItem.Click += new System.EventHandler(this.GuestNetworkTestToolStripMenuItem_Click);
@@ -1333,7 +1429,7 @@
             // chamberPerformanceTestToolStripMenuItem
             // 
             this.chamberPerformanceTestToolStripMenuItem.Name = "chamberPerformanceTestToolStripMenuItem";
-            this.chamberPerformanceTestToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
+            this.chamberPerformanceTestToolStripMenuItem.Size = new System.Drawing.Size(269, 22);
             this.chamberPerformanceTestToolStripMenuItem.Text = "Chamber Performance Test";
             this.chamberPerformanceTestToolStripMenuItem.Visible = false;
             this.chamberPerformanceTestToolStripMenuItem.Click += new System.EventHandler(this.chamberPerformanceTestToolStripMenuItem_Click);
@@ -1341,7 +1437,7 @@
             // integrationTestToolStripMenuItem
             // 
             this.integrationTestToolStripMenuItem.Name = "integrationTestToolStripMenuItem";
-            this.integrationTestToolStripMenuItem.Size = new System.Drawing.Size(257, 22);
+            this.integrationTestToolStripMenuItem.Size = new System.Drawing.Size(269, 22);
             this.integrationTestToolStripMenuItem.Text = "Integration Test";
             this.integrationTestToolStripMenuItem.Visible = false;
             this.integrationTestToolStripMenuItem.Click += new System.EventHandler(this.integrationTestToolStripMenuItem_Click);
@@ -4476,7 +4572,7 @@
             this.groupBox15.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox15.Name = "groupBox15";
             this.groupBox15.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox15.Size = new System.Drawing.Size(320, 224);
+            this.groupBox15.Size = new System.Drawing.Size(320, 247);
             this.groupBox15.TabIndex = 13;
             this.groupBox15.TabStop = false;
             this.groupBox15.Text = "Controller Setting";
@@ -4484,7 +4580,7 @@
             // label50
             // 
             this.label50.AutoSize = true;
-            this.label50.Location = new System.Drawing.Point(250, 148);
+            this.label50.Location = new System.Drawing.Point(234, 148);
             this.label50.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(48, 15);
@@ -4494,7 +4590,7 @@
             // label49
             // 
             this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(250, 100);
+            this.label49.Location = new System.Drawing.Point(234, 100);
             this.label49.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(48, 15);
@@ -4513,10 +4609,10 @@
             // 
             // nudPowerOnOffTestConditionPowerOffTime
             // 
-            this.nudPowerOnOffTestConditionPowerOffTime.Location = new System.Drawing.Point(140, 143);
+            this.nudPowerOnOffTestConditionPowerOffTime.Location = new System.Drawing.Point(134, 143);
             this.nudPowerOnOffTestConditionPowerOffTime.Margin = new System.Windows.Forms.Padding(4);
             this.nudPowerOnOffTestConditionPowerOffTime.Name = "nudPowerOnOffTestConditionPowerOffTime";
-            this.nudPowerOnOffTestConditionPowerOffTime.Size = new System.Drawing.Size(106, 25);
+            this.nudPowerOnOffTestConditionPowerOffTime.Size = new System.Drawing.Size(95, 25);
             this.nudPowerOnOffTestConditionPowerOffTime.TabIndex = 4;
             this.nudPowerOnOffTestConditionPowerOffTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.nudPowerOnOffTestConditionPowerOffTime.Value = new decimal(new int[] {
@@ -4527,7 +4623,7 @@
             // 
             // nudPowerOnOffTestConditionPowerOnTime
             // 
-            this.nudPowerOnOffTestConditionPowerOnTime.Location = new System.Drawing.Point(140, 96);
+            this.nudPowerOnOffTestConditionPowerOnTime.Location = new System.Drawing.Point(134, 96);
             this.nudPowerOnOffTestConditionPowerOnTime.Margin = new System.Windows.Forms.Padding(4);
             this.nudPowerOnOffTestConditionPowerOnTime.Maximum = new decimal(new int[] {
             300,
@@ -4535,7 +4631,7 @@
             0,
             0});
             this.nudPowerOnOffTestConditionPowerOnTime.Name = "nudPowerOnOffTestConditionPowerOnTime";
-            this.nudPowerOnOffTestConditionPowerOnTime.Size = new System.Drawing.Size(106, 25);
+            this.nudPowerOnOffTestConditionPowerOnTime.Size = new System.Drawing.Size(93, 25);
             this.nudPowerOnOffTestConditionPowerOnTime.TabIndex = 3;
             this.nudPowerOnOffTestConditionPowerOnTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.nudPowerOnOffTestConditionPowerOnTime.Value = new decimal(new int[] {
@@ -4546,7 +4642,7 @@
             // 
             // nudPowerOnOffTestConditionPowerPort
             // 
-            this.nudPowerOnOffTestConditionPowerPort.Location = new System.Drawing.Point(140, 49);
+            this.nudPowerOnOffTestConditionPowerPort.Location = new System.Drawing.Point(134, 49);
             this.nudPowerOnOffTestConditionPowerPort.Margin = new System.Windows.Forms.Padding(4);
             this.nudPowerOnOffTestConditionPowerPort.Maximum = new decimal(new int[] {
             7,
@@ -4554,7 +4650,7 @@
             0,
             0});
             this.nudPowerOnOffTestConditionPowerPort.Name = "nudPowerOnOffTestConditionPowerPort";
-            this.nudPowerOnOffTestConditionPowerPort.Size = new System.Drawing.Size(106, 25);
+            this.nudPowerOnOffTestConditionPowerPort.Size = new System.Drawing.Size(93, 25);
             this.nudPowerOnOffTestConditionPowerPort.TabIndex = 2;
             this.nudPowerOnOffTestConditionPowerPort.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -4580,6 +4676,14 @@
             // 
             // groupBox14
             // 
+            this.groupBox14.Controls.Add(this.label159);
+            this.groupBox14.Controls.Add(this.label158);
+            this.groupBox14.Controls.Add(this.label157);
+            this.groupBox14.Controls.Add(this.cboxPowerOnOffTestConditionSSD3);
+            this.groupBox14.Controls.Add(this.cboxPowerOnOffTestConditionSSD2);
+            this.groupBox14.Controls.Add(this.cboxPowerOnOffTestConditionSSD1);
+            this.groupBox14.Controls.Add(this.label156);
+            this.groupBox14.Controls.Add(this.cboxPowerOnOffTestConditionAction3);
             this.groupBox14.Controls.Add(this.txtPowerOnOffTestConditionLoginPW);
             this.groupBox14.Controls.Add(this.label155);
             this.groupBox14.Controls.Add(this.txtPowerOnOffTestConditionLoginID);
@@ -4601,14 +4705,168 @@
             this.groupBox14.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox14.Name = "groupBox14";
             this.groupBox14.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox14.Size = new System.Drawing.Size(564, 224);
+            this.groupBox14.Size = new System.Drawing.Size(688, 247);
             this.groupBox14.TabIndex = 12;
             this.groupBox14.TabStop = false;
             this.groupBox14.Text = "Device Setting";
             // 
+            // label159
+            // 
+            this.label159.AutoSize = true;
+            this.label159.Location = new System.Drawing.Point(540, 141);
+            this.label159.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label159.Name = "label159";
+            this.label159.Size = new System.Drawing.Size(44, 15);
+            this.label159.TabIndex = 24;
+            this.label159.Text = "SSD3:";
+            // 
+            // label158
+            // 
+            this.label158.AutoSize = true;
+            this.label158.Location = new System.Drawing.Point(404, 141);
+            this.label158.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label158.Name = "label158";
+            this.label158.Size = new System.Drawing.Size(44, 15);
+            this.label158.TabIndex = 23;
+            this.label158.Text = "SSD2:";
+            // 
+            // label157
+            // 
+            this.label157.AutoSize = true;
+            this.label157.Location = new System.Drawing.Point(263, 141);
+            this.label157.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label157.Name = "label157";
+            this.label157.Size = new System.Drawing.Size(44, 15);
+            this.label157.TabIndex = 22;
+            this.label157.Text = "SSD1:";
+            // 
+            // cboxPowerOnOffTestConditionSSD3
+            // 
+            this.cboxPowerOnOffTestConditionSSD3.FormattingEnabled = true;
+            this.cboxPowerOnOffTestConditionSSD3.Items.AddRange(new object[] {
+            "None",
+            "D:",
+            "E:",
+            "F:",
+            "G:",
+            "H:",
+            "I:",
+            "J:",
+            "K:",
+            "L:",
+            "M:",
+            "N:",
+            "O:",
+            "P:",
+            "Q:",
+            "R:",
+            "S:",
+            "T:",
+            "U:",
+            "V:",
+            "W:",
+            "X:",
+            "Y:",
+            "Z:"});
+            this.cboxPowerOnOffTestConditionSSD3.Location = new System.Drawing.Point(587, 138);
+            this.cboxPowerOnOffTestConditionSSD3.Margin = new System.Windows.Forms.Padding(4);
+            this.cboxPowerOnOffTestConditionSSD3.Name = "cboxPowerOnOffTestConditionSSD3";
+            this.cboxPowerOnOffTestConditionSSD3.Size = new System.Drawing.Size(76, 23);
+            this.cboxPowerOnOffTestConditionSSD3.TabIndex = 21;
+            // 
+            // cboxPowerOnOffTestConditionSSD2
+            // 
+            this.cboxPowerOnOffTestConditionSSD2.FormattingEnabled = true;
+            this.cboxPowerOnOffTestConditionSSD2.Items.AddRange(new object[] {
+            "None",
+            "D:",
+            "E:",
+            "F:",
+            "G:",
+            "H:",
+            "I:",
+            "J:",
+            "K:",
+            "L:",
+            "M:",
+            "N:",
+            "O:",
+            "P:",
+            "Q:",
+            "R:",
+            "S:",
+            "T:",
+            "U:",
+            "V:",
+            "W:",
+            "X:",
+            "Y:",
+            "Z:"});
+            this.cboxPowerOnOffTestConditionSSD2.Location = new System.Drawing.Point(448, 138);
+            this.cboxPowerOnOffTestConditionSSD2.Margin = new System.Windows.Forms.Padding(4);
+            this.cboxPowerOnOffTestConditionSSD2.Name = "cboxPowerOnOffTestConditionSSD2";
+            this.cboxPowerOnOffTestConditionSSD2.Size = new System.Drawing.Size(76, 23);
+            this.cboxPowerOnOffTestConditionSSD2.TabIndex = 20;
+            // 
+            // cboxPowerOnOffTestConditionSSD1
+            // 
+            this.cboxPowerOnOffTestConditionSSD1.FormattingEnabled = true;
+            this.cboxPowerOnOffTestConditionSSD1.Items.AddRange(new object[] {
+            "None",
+            "D:",
+            "E:",
+            "F:",
+            "G:",
+            "H:",
+            "I:",
+            "J:",
+            "K:",
+            "L:",
+            "M:",
+            "N:",
+            "O:",
+            "P:",
+            "Q:",
+            "R:",
+            "S:",
+            "T:",
+            "U:",
+            "V:",
+            "W:",
+            "X:",
+            "Y:",
+            "Z:"});
+            this.cboxPowerOnOffTestConditionSSD1.Location = new System.Drawing.Point(310, 139);
+            this.cboxPowerOnOffTestConditionSSD1.Margin = new System.Windows.Forms.Padding(4);
+            this.cboxPowerOnOffTestConditionSSD1.Name = "cboxPowerOnOffTestConditionSSD1";
+            this.cboxPowerOnOffTestConditionSSD1.Size = new System.Drawing.Size(76, 23);
+            this.cboxPowerOnOffTestConditionSSD1.TabIndex = 19;
+            // 
+            // label156
+            // 
+            this.label156.AutoSize = true;
+            this.label156.Location = new System.Drawing.Point(42, 142);
+            this.label156.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label156.Name = "label156";
+            this.label156.Size = new System.Drawing.Size(60, 15);
+            this.label156.TabIndex = 18;
+            this.label156.Text = "Action 3:";
+            // 
+            // cboxPowerOnOffTestConditionAction3
+            // 
+            this.cboxPowerOnOffTestConditionAction3.FormattingEnabled = true;
+            this.cboxPowerOnOffTestConditionAction3.Items.AddRange(new object[] {
+            "X",
+            "Check SSD"});
+            this.cboxPowerOnOffTestConditionAction3.Location = new System.Drawing.Point(107, 138);
+            this.cboxPowerOnOffTestConditionAction3.Margin = new System.Windows.Forms.Padding(4);
+            this.cboxPowerOnOffTestConditionAction3.Name = "cboxPowerOnOffTestConditionAction3";
+            this.cboxPowerOnOffTestConditionAction3.Size = new System.Drawing.Size(139, 23);
+            this.cboxPowerOnOffTestConditionAction3.TabIndex = 17;
+            // 
             // txtPowerOnOffTestConditionLoginPW
             // 
-            this.txtPowerOnOffTestConditionLoginPW.Location = new System.Drawing.Point(439, 140);
+            this.txtPowerOnOffTestConditionLoginPW.Location = new System.Drawing.Point(434, 178);
             this.txtPowerOnOffTestConditionLoginPW.Margin = new System.Windows.Forms.Padding(4);
             this.txtPowerOnOffTestConditionLoginPW.Name = "txtPowerOnOffTestConditionLoginPW";
             this.txtPowerOnOffTestConditionLoginPW.Size = new System.Drawing.Size(100, 25);
@@ -4618,7 +4876,7 @@
             // label155
             // 
             this.label155.AutoSize = true;
-            this.label155.Location = new System.Drawing.Point(407, 144);
+            this.label155.Location = new System.Drawing.Point(402, 182);
             this.label155.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label155.Name = "label155";
             this.label155.Size = new System.Drawing.Size(32, 15);
@@ -4627,7 +4885,7 @@
             // 
             // txtPowerOnOffTestConditionLoginID
             // 
-            this.txtPowerOnOffTestConditionLoginID.Location = new System.Drawing.Point(289, 141);
+            this.txtPowerOnOffTestConditionLoginID.Location = new System.Drawing.Point(286, 179);
             this.txtPowerOnOffTestConditionLoginID.Margin = new System.Windows.Forms.Padding(4);
             this.txtPowerOnOffTestConditionLoginID.Name = "txtPowerOnOffTestConditionLoginID";
             this.txtPowerOnOffTestConditionLoginID.Size = new System.Drawing.Size(100, 25);
@@ -4637,7 +4895,7 @@
             // label154
             // 
             this.label154.AutoSize = true;
-            this.label154.Location = new System.Drawing.Point(263, 145);
+            this.label154.Location = new System.Drawing.Point(260, 183);
             this.label154.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label154.Name = "label154";
             this.label154.Size = new System.Drawing.Size(26, 15);
@@ -4647,7 +4905,7 @@
             // label152
             // 
             this.label152.AutoSize = true;
-            this.label152.Location = new System.Drawing.Point(442, 107);
+            this.label152.Location = new System.Drawing.Point(439, 109);
             this.label152.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label152.Name = "label152";
             this.label152.Size = new System.Drawing.Size(48, 15);
@@ -4656,7 +4914,7 @@
             // 
             // nudPowerOnOffTestConditionSleepTimer
             // 
-            this.nudPowerOnOffTestConditionSleepTimer.Location = new System.Drawing.Point(348, 103);
+            this.nudPowerOnOffTestConditionSleepTimer.Location = new System.Drawing.Point(345, 105);
             this.nudPowerOnOffTestConditionSleepTimer.Margin = new System.Windows.Forms.Padding(4);
             this.nudPowerOnOffTestConditionSleepTimer.Maximum = new decimal(new int[] {
             300,
@@ -4676,7 +4934,7 @@
             // label153
             // 
             this.label153.AutoSize = true;
-            this.label153.Location = new System.Drawing.Point(264, 108);
+            this.label153.Location = new System.Drawing.Point(261, 110);
             this.label153.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label153.Name = "label153";
             this.label153.Size = new System.Drawing.Size(85, 15);
@@ -4686,7 +4944,7 @@
             // label151
             // 
             this.label151.AutoSize = true;
-            this.label151.Location = new System.Drawing.Point(45, 108);
+            this.label151.Location = new System.Drawing.Point(42, 110);
             this.label151.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label151.Name = "label151";
             this.label151.Size = new System.Drawing.Size(60, 15);
@@ -4699,7 +4957,7 @@
             this.cboxPowerOnOffTestConditionAction2.Items.AddRange(new object[] {
             "X",
             "System Sleep"});
-            this.cboxPowerOnOffTestConditionAction2.Location = new System.Drawing.Point(110, 104);
+            this.cboxPowerOnOffTestConditionAction2.Location = new System.Drawing.Point(107, 106);
             this.cboxPowerOnOffTestConditionAction2.Margin = new System.Windows.Forms.Padding(4);
             this.cboxPowerOnOffTestConditionAction2.Name = "cboxPowerOnOffTestConditionAction2";
             this.cboxPowerOnOffTestConditionAction2.Size = new System.Drawing.Size(139, 23);
@@ -4707,7 +4965,7 @@
             // 
             // txtPowerOnOffTestConditionModelName
             // 
-            this.txtPowerOnOffTestConditionModelName.Location = new System.Drawing.Point(110, 36);
+            this.txtPowerOnOffTestConditionModelName.Location = new System.Drawing.Point(107, 30);
             this.txtPowerOnOffTestConditionModelName.Margin = new System.Windows.Forms.Padding(4);
             this.txtPowerOnOffTestConditionModelName.Name = "txtPowerOnOffTestConditionModelName";
             this.txtPowerOnOffTestConditionModelName.Size = new System.Drawing.Size(140, 25);
@@ -4717,7 +4975,7 @@
             // label48
             // 
             this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(21, 41);
+            this.label48.Location = new System.Drawing.Point(18, 35);
             this.label48.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(85, 15);
@@ -4726,7 +4984,7 @@
             // 
             // txtPowerOnOffTestConditionParameter2
             // 
-            this.txtPowerOnOffTestConditionParameter2.Location = new System.Drawing.Point(110, 174);
+            this.txtPowerOnOffTestConditionParameter2.Location = new System.Drawing.Point(107, 210);
             this.txtPowerOnOffTestConditionParameter2.Margin = new System.Windows.Forms.Padding(4);
             this.txtPowerOnOffTestConditionParameter2.Name = "txtPowerOnOffTestConditionParameter2";
             this.txtPowerOnOffTestConditionParameter2.Size = new System.Drawing.Size(140, 25);
@@ -4735,7 +4993,7 @@
             // 
             // txtPowerOnOffTestConditionParameter1
             // 
-            this.txtPowerOnOffTestConditionParameter1.Location = new System.Drawing.Point(110, 140);
+            this.txtPowerOnOffTestConditionParameter1.Location = new System.Drawing.Point(107, 178);
             this.txtPowerOnOffTestConditionParameter1.Margin = new System.Windows.Forms.Padding(4);
             this.txtPowerOnOffTestConditionParameter1.Name = "txtPowerOnOffTestConditionParameter1";
             this.txtPowerOnOffTestConditionParameter1.Size = new System.Drawing.Size(139, 25);
@@ -4745,7 +5003,7 @@
             // label44
             // 
             this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(26, 178);
+            this.label44.Location = new System.Drawing.Point(23, 214);
             this.label44.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(79, 15);
@@ -4755,7 +5013,7 @@
             // label43
             // 
             this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(26, 145);
+            this.label43.Location = new System.Drawing.Point(23, 183);
             this.label43.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(79, 15);
@@ -4765,7 +5023,7 @@
             // label42
             // 
             this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(45, 75);
+            this.label42.Location = new System.Drawing.Point(42, 77);
             this.label42.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label42.Name = "label42";
             this.label42.Size = new System.Drawing.Size(60, 15);
@@ -4777,7 +5035,7 @@
             this.cboxPowerOnOffTestConditionAction1.FormattingEnabled = true;
             this.cboxPowerOnOffTestConditionAction1.Items.AddRange(new object[] {
             "Ping"});
-            this.cboxPowerOnOffTestConditionAction1.Location = new System.Drawing.Point(110, 71);
+            this.cboxPowerOnOffTestConditionAction1.Location = new System.Drawing.Point(107, 73);
             this.cboxPowerOnOffTestConditionAction1.Margin = new System.Windows.Forms.Padding(4);
             this.cboxPowerOnOffTestConditionAction1.Name = "cboxPowerOnOffTestConditionAction1";
             this.cboxPowerOnOffTestConditionAction1.Size = new System.Drawing.Size(140, 23);
@@ -4785,7 +5043,7 @@
             // 
             // btnPowerOnOffTestConditionLoadSetting
             // 
-            this.btnPowerOnOffTestConditionLoadSetting.Location = new System.Drawing.Point(1048, 142);
+            this.btnPowerOnOffTestConditionLoadSetting.Location = new System.Drawing.Point(1048, 206);
             this.btnPowerOnOffTestConditionLoadSetting.Margin = new System.Windows.Forms.Padding(4);
             this.btnPowerOnOffTestConditionLoadSetting.Name = "btnPowerOnOffTestConditionLoadSetting";
             this.btnPowerOnOffTestConditionLoadSetting.Size = new System.Drawing.Size(108, 44);
@@ -4796,7 +5054,7 @@
             // 
             // btnPowerOnOffTestConditionSaveSetting
             // 
-            this.btnPowerOnOffTestConditionSaveSetting.Location = new System.Drawing.Point(1048, 88);
+            this.btnPowerOnOffTestConditionSaveSetting.Location = new System.Drawing.Point(1048, 153);
             this.btnPowerOnOffTestConditionSaveSetting.Margin = new System.Windows.Forms.Padding(4);
             this.btnPowerOnOffTestConditionSaveSetting.Name = "btnPowerOnOffTestConditionSaveSetting";
             this.btnPowerOnOffTestConditionSaveSetting.Size = new System.Drawing.Size(108, 48);
@@ -4807,10 +5065,10 @@
             // 
             // btnPowerOnOffTestConditionEditSetting
             // 
-            this.btnPowerOnOffTestConditionEditSetting.Location = new System.Drawing.Point(925, 142);
+            this.btnPowerOnOffTestConditionEditSetting.Location = new System.Drawing.Point(1048, 85);
             this.btnPowerOnOffTestConditionEditSetting.Margin = new System.Windows.Forms.Padding(4);
             this.btnPowerOnOffTestConditionEditSetting.Name = "btnPowerOnOffTestConditionEditSetting";
-            this.btnPowerOnOffTestConditionEditSetting.Size = new System.Drawing.Size(111, 44);
+            this.btnPowerOnOffTestConditionEditSetting.Size = new System.Drawing.Size(107, 44);
             this.btnPowerOnOffTestConditionEditSetting.TabIndex = 9;
             this.btnPowerOnOffTestConditionEditSetting.Text = "Edit";
             this.btnPowerOnOffTestConditionEditSetting.UseVisualStyleBackColor = true;
@@ -4818,10 +5076,10 @@
             // 
             // btnPowerOnOffTestConditionAddSetting
             // 
-            this.btnPowerOnOffTestConditionAddSetting.Location = new System.Drawing.Point(925, 89);
+            this.btnPowerOnOffTestConditionAddSetting.Location = new System.Drawing.Point(1048, 32);
             this.btnPowerOnOffTestConditionAddSetting.Margin = new System.Windows.Forms.Padding(4);
             this.btnPowerOnOffTestConditionAddSetting.Name = "btnPowerOnOffTestConditionAddSetting";
-            this.btnPowerOnOffTestConditionAddSetting.Size = new System.Drawing.Size(111, 48);
+            this.btnPowerOnOffTestConditionAddSetting.Size = new System.Drawing.Size(107, 48);
             this.btnPowerOnOffTestConditionAddSetting.TabIndex = 8;
             this.btnPowerOnOffTestConditionAddSetting.Text = "Add";
             this.btnPowerOnOffTestConditionAddSetting.UseVisualStyleBackColor = true;
@@ -4847,7 +5105,7 @@
             dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvPowerOnOffTestConditionData.DefaultCellStyle = dataGridViewCellStyle11;
-            this.dgvPowerOnOffTestConditionData.Location = new System.Drawing.Point(8, 256);
+            this.dgvPowerOnOffTestConditionData.Location = new System.Drawing.Point(8, 270);
             this.dgvPowerOnOffTestConditionData.Margin = new System.Windows.Forms.Padding(4);
             this.dgvPowerOnOffTestConditionData.Name = "dgvPowerOnOffTestConditionData";
             dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -4859,7 +5117,7 @@
             dataGridViewCellStyle12.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
             this.dgvPowerOnOffTestConditionData.RowHeadersDefaultCellStyle = dataGridViewCellStyle12;
             this.dgvPowerOnOffTestConditionData.RowTemplate.Height = 24;
-            this.dgvPowerOnOffTestConditionData.Size = new System.Drawing.Size(1153, 288);
+            this.dgvPowerOnOffTestConditionData.Size = new System.Drawing.Size(1153, 274);
             this.dgvPowerOnOffTestConditionData.TabIndex = 0;
             this.dgvPowerOnOffTestConditionData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPowerOnOffTestConfition_CellContentClick);
             // 
@@ -12439,11 +12697,759 @@
             this.btnSeleniumTest.Text = "Selenium Test";
             this.btnSeleniumTest.UseVisualStyleBackColor = true;
             // 
+            // PXzigbeePowerOnOff_tabControl
+            // 
+            this.PXzigbeePowerOnOff_tabControl.Controls.Add(this.tp_PXzigbeePowerOnOffTestCondition);
+            this.PXzigbeePowerOnOff_tabControl.Controls.Add(this.tp_PXzigbeePowerOnOffFunctionTest);
+            this.PXzigbeePowerOnOff_tabControl.Location = new System.Drawing.Point(8, 32);
+            this.PXzigbeePowerOnOff_tabControl.Margin = new System.Windows.Forms.Padding(4);
+            this.PXzigbeePowerOnOff_tabControl.Name = "PXzigbeePowerOnOff_tabControl";
+            this.PXzigbeePowerOnOff_tabControl.SelectedIndex = 0;
+            this.PXzigbeePowerOnOff_tabControl.Size = new System.Drawing.Size(1183, 582);
+            this.PXzigbeePowerOnOff_tabControl.TabIndex = 45;
+            this.PXzigbeePowerOnOff_tabControl.Selected += new System.Windows.Forms.TabControlEventHandler(this.PXzigbeePowerOnOff_tabControl_Selected);
+            // 
+            // tp_PXzigbeePowerOnOffTestCondition
+            // 
+            this.tp_PXzigbeePowerOnOffTestCondition.BackColor = System.Drawing.Color.Azure;
+            this.tp_PXzigbeePowerOnOffTestCondition.Controls.Add(this.labelPXzigbeePowerOnOffTestConditionCMD);
+            this.tp_PXzigbeePowerOnOffTestCondition.Controls.Add(this.label323);
+            this.tp_PXzigbeePowerOnOffTestCondition.Controls.Add(this.gbox_PXzigbeePowerOnOffTestConditionDeviceSetting);
+            this.tp_PXzigbeePowerOnOffTestCondition.Controls.Add(this.btnPXzigbeePowerOnOffTestConditionLoadSetting);
+            this.tp_PXzigbeePowerOnOffTestCondition.Controls.Add(this.btnPXzigbeePowerOnOffTestConditionSaveSetting);
+            this.tp_PXzigbeePowerOnOffTestCondition.Controls.Add(this.btnPXzigbeePowerOnOffTestConditionEditSetting);
+            this.tp_PXzigbeePowerOnOffTestCondition.Controls.Add(this.btnPXzigbeePowerOnOffTestConditionAddSetting);
+            this.tp_PXzigbeePowerOnOffTestCondition.Controls.Add(this.dgvPXzigbeePowerOnOffTestConditionData);
+            this.tp_PXzigbeePowerOnOffTestCondition.Location = new System.Drawing.Point(4, 25);
+            this.tp_PXzigbeePowerOnOffTestCondition.Margin = new System.Windows.Forms.Padding(4);
+            this.tp_PXzigbeePowerOnOffTestCondition.Name = "tp_PXzigbeePowerOnOffTestCondition";
+            this.tp_PXzigbeePowerOnOffTestCondition.Padding = new System.Windows.Forms.Padding(4);
+            this.tp_PXzigbeePowerOnOffTestCondition.Size = new System.Drawing.Size(1175, 553);
+            this.tp_PXzigbeePowerOnOffTestCondition.TabIndex = 0;
+            this.tp_PXzigbeePowerOnOffTestCondition.Text = "PX Zigbee Power On Off Test Condition";
+            // 
+            // labelPXzigbeePowerOnOffTestConditionCMD
+            // 
+            this.labelPXzigbeePowerOnOffTestConditionCMD.Font = new System.Drawing.Font("Cambria", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPXzigbeePowerOnOffTestConditionCMD.ForeColor = System.Drawing.Color.Blue;
+            this.labelPXzigbeePowerOnOffTestConditionCMD.Location = new System.Drawing.Point(15, 264);
+            this.labelPXzigbeePowerOnOffTestConditionCMD.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelPXzigbeePowerOnOffTestConditionCMD.Name = "labelPXzigbeePowerOnOffTestConditionCMD";
+            this.labelPXzigbeePowerOnOffTestConditionCMD.Size = new System.Drawing.Size(1138, 59);
+            this.labelPXzigbeePowerOnOffTestConditionCMD.TabIndex = 51;
+            this.labelPXzigbeePowerOnOffTestConditionCMD.Text = resources.GetString("labelPXzigbeePowerOnOffTestConditionCMD.Text");
+            // 
+            // label323
+            // 
+            this.label323.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label323.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label323.Location = new System.Drawing.Point(9, 1);
+            this.label323.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label323.Name = "label323";
+            this.label323.Size = new System.Drawing.Size(1156, 60);
+            this.label323.TabIndex = 14;
+            this.label323.Text = "PX Zigbee Power On/Off Test Condition Control Panel";
+            this.label323.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // gbox_PXzigbeePowerOnOffTestConditionDeviceSetting
+            // 
+            this.gbox_PXzigbeePowerOnOffTestConditionDeviceSetting.Controls.Add(this.label314);
+            this.gbox_PXzigbeePowerOnOffTestConditionDeviceSetting.Controls.Add(this.nudPXzigbeePowerOnOffTestConditionAction4SleepTimer);
+            this.gbox_PXzigbeePowerOnOffTestConditionDeviceSetting.Controls.Add(this.label318);
+            this.gbox_PXzigbeePowerOnOffTestConditionDeviceSetting.Controls.Add(this.label324);
+            this.gbox_PXzigbeePowerOnOffTestConditionDeviceSetting.Controls.Add(this.cboxPXzigbeePowerOnOffTestConditionAction4);
+            this.gbox_PXzigbeePowerOnOffTestConditionDeviceSetting.Controls.Add(this.label304);
+            this.gbox_PXzigbeePowerOnOffTestConditionDeviceSetting.Controls.Add(this.nudPXzigbeePowerOnOffTestConditionAction3SleepTimer);
+            this.gbox_PXzigbeePowerOnOffTestConditionDeviceSetting.Controls.Add(this.label305);
+            this.gbox_PXzigbeePowerOnOffTestConditionDeviceSetting.Controls.Add(this.label313);
+            this.gbox_PXzigbeePowerOnOffTestConditionDeviceSetting.Controls.Add(this.cboxPXzigbeePowerOnOffTestConditionAction3);
+            this.gbox_PXzigbeePowerOnOffTestConditionDeviceSetting.Controls.Add(this.label301);
+            this.gbox_PXzigbeePowerOnOffTestConditionDeviceSetting.Controls.Add(this.nudPXzigbeePowerOnOffTestConditionAction2SleepTimer);
+            this.gbox_PXzigbeePowerOnOffTestConditionDeviceSetting.Controls.Add(this.label302);
+            this.gbox_PXzigbeePowerOnOffTestConditionDeviceSetting.Controls.Add(this.label303);
+            this.gbox_PXzigbeePowerOnOffTestConditionDeviceSetting.Controls.Add(this.cboxPXzigbeePowerOnOffTestConditionAction2);
+            this.gbox_PXzigbeePowerOnOffTestConditionDeviceSetting.Controls.Add(this.labelPXzigbeePowerOnOffTestConditionExecutionStep);
+            this.gbox_PXzigbeePowerOnOffTestConditionDeviceSetting.Controls.Add(this.label326);
+            this.gbox_PXzigbeePowerOnOffTestConditionDeviceSetting.Controls.Add(this.nudPXzigbeePowerOnOffTestConditionAction1SleepTimer);
+            this.gbox_PXzigbeePowerOnOffTestConditionDeviceSetting.Controls.Add(this.label327);
+            this.gbox_PXzigbeePowerOnOffTestConditionDeviceSetting.Controls.Add(this.txtPXzigbeePowerOnOffTestConditionMqttCmdPath);
+            this.gbox_PXzigbeePowerOnOffTestConditionDeviceSetting.Controls.Add(this.label312);
+            this.gbox_PXzigbeePowerOnOffTestConditionDeviceSetting.Controls.Add(this.txtPXzigbeePowerOnOffTestConditionNodeID);
+            this.gbox_PXzigbeePowerOnOffTestConditionDeviceSetting.Controls.Add(this.label307);
+            this.gbox_PXzigbeePowerOnOffTestConditionDeviceSetting.Controls.Add(this.txtPXzigbeePowerOnOffTestConditionModelName);
+            this.gbox_PXzigbeePowerOnOffTestConditionDeviceSetting.Controls.Add(this.label306);
+            this.gbox_PXzigbeePowerOnOffTestConditionDeviceSetting.Controls.Add(this.txtPXzigbeePowerOnOffTestConditionIP);
+            this.gbox_PXzigbeePowerOnOffTestConditionDeviceSetting.Controls.Add(this.label308);
+            this.gbox_PXzigbeePowerOnOffTestConditionDeviceSetting.Controls.Add(this.label309);
+            this.gbox_PXzigbeePowerOnOffTestConditionDeviceSetting.Controls.Add(this.cboxPXzigbeePowerOnOffTestConditionAction1);
+            this.gbox_PXzigbeePowerOnOffTestConditionDeviceSetting.Location = new System.Drawing.Point(13, 59);
+            this.gbox_PXzigbeePowerOnOffTestConditionDeviceSetting.Margin = new System.Windows.Forms.Padding(4);
+            this.gbox_PXzigbeePowerOnOffTestConditionDeviceSetting.Name = "gbox_PXzigbeePowerOnOffTestConditionDeviceSetting";
+            this.gbox_PXzigbeePowerOnOffTestConditionDeviceSetting.Padding = new System.Windows.Forms.Padding(4);
+            this.gbox_PXzigbeePowerOnOffTestConditionDeviceSetting.Size = new System.Drawing.Size(1011, 198);
+            this.gbox_PXzigbeePowerOnOffTestConditionDeviceSetting.TabIndex = 12;
+            this.gbox_PXzigbeePowerOnOffTestConditionDeviceSetting.TabStop = false;
+            this.gbox_PXzigbeePowerOnOffTestConditionDeviceSetting.Text = "Device Setting";
+            // 
+            // label314
+            // 
+            this.label314.AutoSize = true;
+            this.label314.Location = new System.Drawing.Point(449, 158);
+            this.label314.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label314.Name = "label314";
+            this.label314.Size = new System.Drawing.Size(48, 15);
+            this.label314.TabIndex = 50;
+            this.label314.Text = "Second";
+            // 
+            // nudPXzigbeePowerOnOffTestConditionAction4SleepTimer
+            // 
+            this.nudPXzigbeePowerOnOffTestConditionAction4SleepTimer.DecimalPlaces = 1;
+            this.nudPXzigbeePowerOnOffTestConditionAction4SleepTimer.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
+            this.nudPXzigbeePowerOnOffTestConditionAction4SleepTimer.Location = new System.Drawing.Point(357, 154);
+            this.nudPXzigbeePowerOnOffTestConditionAction4SleepTimer.Margin = new System.Windows.Forms.Padding(4);
+            this.nudPXzigbeePowerOnOffTestConditionAction4SleepTimer.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.nudPXzigbeePowerOnOffTestConditionAction4SleepTimer.Name = "nudPXzigbeePowerOnOffTestConditionAction4SleepTimer";
+            this.nudPXzigbeePowerOnOffTestConditionAction4SleepTimer.Size = new System.Drawing.Size(89, 25);
+            this.nudPXzigbeePowerOnOffTestConditionAction4SleepTimer.TabIndex = 49;
+            this.nudPXzigbeePowerOnOffTestConditionAction4SleepTimer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nudPXzigbeePowerOnOffTestConditionAction4SleepTimer.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
+            // 
+            // label318
+            // 
+            this.label318.AutoSize = true;
+            this.label318.Location = new System.Drawing.Point(263, 157);
+            this.label318.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label318.Name = "label318";
+            this.label318.Size = new System.Drawing.Size(96, 15);
+            this.label318.TabIndex = 48;
+            this.label318.Text = "Sleep Timer 4: ";
+            // 
+            // label324
+            // 
+            this.label324.AutoSize = true;
+            this.label324.Location = new System.Drawing.Point(45, 158);
+            this.label324.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label324.Name = "label324";
+            this.label324.Size = new System.Drawing.Size(60, 15);
+            this.label324.TabIndex = 47;
+            this.label324.Text = "Action 4:";
+            // 
+            // cboxPXzigbeePowerOnOffTestConditionAction4
+            // 
+            this.cboxPXzigbeePowerOnOffTestConditionAction4.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboxPXzigbeePowerOnOffTestConditionAction4.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboxPXzigbeePowerOnOffTestConditionAction4.FormattingEnabled = true;
+            this.cboxPXzigbeePowerOnOffTestConditionAction4.Items.AddRange(new object[] {
+            "X",
+            "Power On",
+            "Power Off",
+            "Get Light Status"});
+            this.cboxPXzigbeePowerOnOffTestConditionAction4.Location = new System.Drawing.Point(108, 155);
+            this.cboxPXzigbeePowerOnOffTestConditionAction4.Margin = new System.Windows.Forms.Padding(4);
+            this.cboxPXzigbeePowerOnOffTestConditionAction4.Name = "cboxPXzigbeePowerOnOffTestConditionAction4";
+            this.cboxPXzigbeePowerOnOffTestConditionAction4.Size = new System.Drawing.Size(140, 24);
+            this.cboxPXzigbeePowerOnOffTestConditionAction4.TabIndex = 46;
+            // 
+            // label304
+            // 
+            this.label304.AutoSize = true;
+            this.label304.Location = new System.Drawing.Point(449, 127);
+            this.label304.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label304.Name = "label304";
+            this.label304.Size = new System.Drawing.Size(48, 15);
+            this.label304.TabIndex = 45;
+            this.label304.Text = "Second";
+            // 
+            // nudPXzigbeePowerOnOffTestConditionAction3SleepTimer
+            // 
+            this.nudPXzigbeePowerOnOffTestConditionAction3SleepTimer.DecimalPlaces = 1;
+            this.nudPXzigbeePowerOnOffTestConditionAction3SleepTimer.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
+            this.nudPXzigbeePowerOnOffTestConditionAction3SleepTimer.Location = new System.Drawing.Point(357, 123);
+            this.nudPXzigbeePowerOnOffTestConditionAction3SleepTimer.Margin = new System.Windows.Forms.Padding(4);
+            this.nudPXzigbeePowerOnOffTestConditionAction3SleepTimer.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.nudPXzigbeePowerOnOffTestConditionAction3SleepTimer.Name = "nudPXzigbeePowerOnOffTestConditionAction3SleepTimer";
+            this.nudPXzigbeePowerOnOffTestConditionAction3SleepTimer.Size = new System.Drawing.Size(89, 25);
+            this.nudPXzigbeePowerOnOffTestConditionAction3SleepTimer.TabIndex = 44;
+            this.nudPXzigbeePowerOnOffTestConditionAction3SleepTimer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nudPXzigbeePowerOnOffTestConditionAction3SleepTimer.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
+            // 
+            // label305
+            // 
+            this.label305.AutoSize = true;
+            this.label305.Location = new System.Drawing.Point(263, 126);
+            this.label305.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label305.Name = "label305";
+            this.label305.Size = new System.Drawing.Size(96, 15);
+            this.label305.TabIndex = 43;
+            this.label305.Text = "Sleep Timer 3: ";
+            // 
+            // label313
+            // 
+            this.label313.AutoSize = true;
+            this.label313.Location = new System.Drawing.Point(45, 127);
+            this.label313.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label313.Name = "label313";
+            this.label313.Size = new System.Drawing.Size(60, 15);
+            this.label313.TabIndex = 42;
+            this.label313.Text = "Action 3:";
+            // 
+            // cboxPXzigbeePowerOnOffTestConditionAction3
+            // 
+            this.cboxPXzigbeePowerOnOffTestConditionAction3.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboxPXzigbeePowerOnOffTestConditionAction3.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboxPXzigbeePowerOnOffTestConditionAction3.FormattingEnabled = true;
+            this.cboxPXzigbeePowerOnOffTestConditionAction3.Items.AddRange(new object[] {
+            "X",
+            "Power On",
+            "Power Off",
+            "Get Light Status"});
+            this.cboxPXzigbeePowerOnOffTestConditionAction3.Location = new System.Drawing.Point(108, 124);
+            this.cboxPXzigbeePowerOnOffTestConditionAction3.Margin = new System.Windows.Forms.Padding(4);
+            this.cboxPXzigbeePowerOnOffTestConditionAction3.Name = "cboxPXzigbeePowerOnOffTestConditionAction3";
+            this.cboxPXzigbeePowerOnOffTestConditionAction3.Size = new System.Drawing.Size(140, 24);
+            this.cboxPXzigbeePowerOnOffTestConditionAction3.TabIndex = 41;
+            // 
+            // label301
+            // 
+            this.label301.AutoSize = true;
+            this.label301.Location = new System.Drawing.Point(449, 96);
+            this.label301.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label301.Name = "label301";
+            this.label301.Size = new System.Drawing.Size(48, 15);
+            this.label301.TabIndex = 40;
+            this.label301.Text = "Second";
+            // 
+            // nudPXzigbeePowerOnOffTestConditionAction2SleepTimer
+            // 
+            this.nudPXzigbeePowerOnOffTestConditionAction2SleepTimer.DecimalPlaces = 1;
+            this.nudPXzigbeePowerOnOffTestConditionAction2SleepTimer.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
+            this.nudPXzigbeePowerOnOffTestConditionAction2SleepTimer.Location = new System.Drawing.Point(357, 92);
+            this.nudPXzigbeePowerOnOffTestConditionAction2SleepTimer.Margin = new System.Windows.Forms.Padding(4);
+            this.nudPXzigbeePowerOnOffTestConditionAction2SleepTimer.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.nudPXzigbeePowerOnOffTestConditionAction2SleepTimer.Name = "nudPXzigbeePowerOnOffTestConditionAction2SleepTimer";
+            this.nudPXzigbeePowerOnOffTestConditionAction2SleepTimer.Size = new System.Drawing.Size(89, 25);
+            this.nudPXzigbeePowerOnOffTestConditionAction2SleepTimer.TabIndex = 39;
+            this.nudPXzigbeePowerOnOffTestConditionAction2SleepTimer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nudPXzigbeePowerOnOffTestConditionAction2SleepTimer.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
+            // 
+            // label302
+            // 
+            this.label302.AutoSize = true;
+            this.label302.Location = new System.Drawing.Point(263, 95);
+            this.label302.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label302.Name = "label302";
+            this.label302.Size = new System.Drawing.Size(96, 15);
+            this.label302.TabIndex = 38;
+            this.label302.Text = "Sleep Timer 2: ";
+            // 
+            // label303
+            // 
+            this.label303.AutoSize = true;
+            this.label303.Location = new System.Drawing.Point(45, 96);
+            this.label303.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label303.Name = "label303";
+            this.label303.Size = new System.Drawing.Size(60, 15);
+            this.label303.TabIndex = 37;
+            this.label303.Text = "Action 2:";
+            // 
+            // cboxPXzigbeePowerOnOffTestConditionAction2
+            // 
+            this.cboxPXzigbeePowerOnOffTestConditionAction2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboxPXzigbeePowerOnOffTestConditionAction2.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboxPXzigbeePowerOnOffTestConditionAction2.FormattingEnabled = true;
+            this.cboxPXzigbeePowerOnOffTestConditionAction2.Items.AddRange(new object[] {
+            "X",
+            "Power On",
+            "Power Off",
+            "Get Light Status"});
+            this.cboxPXzigbeePowerOnOffTestConditionAction2.Location = new System.Drawing.Point(108, 93);
+            this.cboxPXzigbeePowerOnOffTestConditionAction2.Margin = new System.Windows.Forms.Padding(4);
+            this.cboxPXzigbeePowerOnOffTestConditionAction2.Name = "cboxPXzigbeePowerOnOffTestConditionAction2";
+            this.cboxPXzigbeePowerOnOffTestConditionAction2.Size = new System.Drawing.Size(140, 24);
+            this.cboxPXzigbeePowerOnOffTestConditionAction2.TabIndex = 36;
+            // 
+            // labelPXzigbeePowerOnOffTestConditionExecutionStep
+            // 
+            this.labelPXzigbeePowerOnOffTestConditionExecutionStep.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPXzigbeePowerOnOffTestConditionExecutionStep.ForeColor = System.Drawing.Color.Red;
+            this.labelPXzigbeePowerOnOffTestConditionExecutionStep.Location = new System.Drawing.Point(507, 94);
+            this.labelPXzigbeePowerOnOffTestConditionExecutionStep.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.labelPXzigbeePowerOnOffTestConditionExecutionStep.Name = "labelPXzigbeePowerOnOffTestConditionExecutionStep";
+            this.labelPXzigbeePowerOnOffTestConditionExecutionStep.Size = new System.Drawing.Size(498, 59);
+            this.labelPXzigbeePowerOnOffTestConditionExecutionStep.TabIndex = 35;
+            this.labelPXzigbeePowerOnOffTestConditionExecutionStep.Text = "** Execution step: \r\n   Action 1 --> Action 2 --> Action 3--> Action 4";
+            // 
+            // label326
+            // 
+            this.label326.AutoSize = true;
+            this.label326.Location = new System.Drawing.Point(449, 64);
+            this.label326.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label326.Name = "label326";
+            this.label326.Size = new System.Drawing.Size(48, 15);
+            this.label326.TabIndex = 33;
+            this.label326.Text = "Second";
+            // 
+            // nudPXzigbeePowerOnOffTestConditionAction1SleepTimer
+            // 
+            this.nudPXzigbeePowerOnOffTestConditionAction1SleepTimer.DecimalPlaces = 1;
+            this.nudPXzigbeePowerOnOffTestConditionAction1SleepTimer.Increment = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
+            this.nudPXzigbeePowerOnOffTestConditionAction1SleepTimer.Location = new System.Drawing.Point(357, 60);
+            this.nudPXzigbeePowerOnOffTestConditionAction1SleepTimer.Margin = new System.Windows.Forms.Padding(4);
+            this.nudPXzigbeePowerOnOffTestConditionAction1SleepTimer.Maximum = new decimal(new int[] {
+            1000,
+            0,
+            0,
+            0});
+            this.nudPXzigbeePowerOnOffTestConditionAction1SleepTimer.Name = "nudPXzigbeePowerOnOffTestConditionAction1SleepTimer";
+            this.nudPXzigbeePowerOnOffTestConditionAction1SleepTimer.Size = new System.Drawing.Size(89, 25);
+            this.nudPXzigbeePowerOnOffTestConditionAction1SleepTimer.TabIndex = 32;
+            this.nudPXzigbeePowerOnOffTestConditionAction1SleepTimer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nudPXzigbeePowerOnOffTestConditionAction1SleepTimer.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            65536});
+            // 
+            // label327
+            // 
+            this.label327.AutoSize = true;
+            this.label327.Location = new System.Drawing.Point(263, 63);
+            this.label327.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label327.Name = "label327";
+            this.label327.Size = new System.Drawing.Size(96, 15);
+            this.label327.TabIndex = 31;
+            this.label327.Text = "Sleep Timer 1: ";
+            // 
+            // txtPXzigbeePowerOnOffTestConditionMqttCmdPath
+            // 
+            this.txtPXzigbeePowerOnOffTestConditionMqttCmdPath.Location = new System.Drawing.Point(728, 26);
+            this.txtPXzigbeePowerOnOffTestConditionMqttCmdPath.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPXzigbeePowerOnOffTestConditionMqttCmdPath.Name = "txtPXzigbeePowerOnOffTestConditionMqttCmdPath";
+            this.txtPXzigbeePowerOnOffTestConditionMqttCmdPath.Size = new System.Drawing.Size(260, 25);
+            this.txtPXzigbeePowerOnOffTestConditionMqttCmdPath.TabIndex = 20;
+            this.txtPXzigbeePowerOnOffTestConditionMqttCmdPath.Text = "C:\\Program Files\\Project X\\mos158";
+            // 
+            // label312
+            // 
+            this.label312.AutoSize = true;
+            this.label312.Location = new System.Drawing.Point(583, 31);
+            this.label312.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label312.Name = "label312";
+            this.label312.Size = new System.Drawing.Size(142, 15);
+            this.label312.TabIndex = 19;
+            this.label312.Text = "MQTT Execution Path:";
+            // 
+            // txtPXzigbeePowerOnOffTestConditionNodeID
+            // 
+            this.txtPXzigbeePowerOnOffTestConditionNodeID.Location = new System.Drawing.Point(480, 27);
+            this.txtPXzigbeePowerOnOffTestConditionNodeID.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPXzigbeePowerOnOffTestConditionNodeID.Name = "txtPXzigbeePowerOnOffTestConditionNodeID";
+            this.txtPXzigbeePowerOnOffTestConditionNodeID.Size = new System.Drawing.Size(92, 25);
+            this.txtPXzigbeePowerOnOffTestConditionNodeID.TabIndex = 18;
+            this.txtPXzigbeePowerOnOffTestConditionNodeID.Text = "0xAB24";
+            // 
+            // label307
+            // 
+            this.label307.AutoSize = true;
+            this.label307.Location = new System.Drawing.Point(418, 32);
+            this.label307.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label307.Name = "label307";
+            this.label307.Size = new System.Drawing.Size(60, 15);
+            this.label307.TabIndex = 17;
+            this.label307.Text = "Node ID:";
+            // 
+            // txtPXzigbeePowerOnOffTestConditionModelName
+            // 
+            this.txtPXzigbeePowerOnOffTestConditionModelName.Location = new System.Drawing.Point(108, 27);
+            this.txtPXzigbeePowerOnOffTestConditionModelName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPXzigbeePowerOnOffTestConditionModelName.Name = "txtPXzigbeePowerOnOffTestConditionModelName";
+            this.txtPXzigbeePowerOnOffTestConditionModelName.Size = new System.Drawing.Size(140, 25);
+            this.txtPXzigbeePowerOnOffTestConditionModelName.TabIndex = 7;
+            this.txtPXzigbeePowerOnOffTestConditionModelName.Text = "PX Zigbee";
+            // 
+            // label306
+            // 
+            this.label306.AutoSize = true;
+            this.label306.Location = new System.Drawing.Point(19, 32);
+            this.label306.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label306.Name = "label306";
+            this.label306.Size = new System.Drawing.Size(85, 15);
+            this.label306.TabIndex = 6;
+            this.label306.Text = "Model Name:";
+            // 
+            // txtPXzigbeePowerOnOffTestConditionIP
+            // 
+            this.txtPXzigbeePowerOnOffTestConditionIP.Location = new System.Drawing.Point(290, 27);
+            this.txtPXzigbeePowerOnOffTestConditionIP.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPXzigbeePowerOnOffTestConditionIP.Name = "txtPXzigbeePowerOnOffTestConditionIP";
+            this.txtPXzigbeePowerOnOffTestConditionIP.Size = new System.Drawing.Size(113, 25);
+            this.txtPXzigbeePowerOnOffTestConditionIP.TabIndex = 4;
+            this.txtPXzigbeePowerOnOffTestConditionIP.Text = "192.168.18.1";
+            // 
+            // label308
+            // 
+            this.label308.AutoSize = true;
+            this.label308.Location = new System.Drawing.Point(262, 32);
+            this.label308.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label308.Name = "label308";
+            this.label308.Size = new System.Drawing.Size(24, 15);
+            this.label308.TabIndex = 2;
+            this.label308.Text = "IP:";
+            // 
+            // label309
+            // 
+            this.label309.AutoSize = true;
+            this.label309.Location = new System.Drawing.Point(45, 64);
+            this.label309.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label309.Name = "label309";
+            this.label309.Size = new System.Drawing.Size(60, 15);
+            this.label309.TabIndex = 1;
+            this.label309.Text = "Action 1:";
+            // 
+            // cboxPXzigbeePowerOnOffTestConditionAction1
+            // 
+            this.cboxPXzigbeePowerOnOffTestConditionAction1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboxPXzigbeePowerOnOffTestConditionAction1.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboxPXzigbeePowerOnOffTestConditionAction1.FormattingEnabled = true;
+            this.cboxPXzigbeePowerOnOffTestConditionAction1.Items.AddRange(new object[] {
+            "X",
+            "Power On",
+            "Power Off",
+            "Get Light Status"});
+            this.cboxPXzigbeePowerOnOffTestConditionAction1.Location = new System.Drawing.Point(108, 61);
+            this.cboxPXzigbeePowerOnOffTestConditionAction1.Margin = new System.Windows.Forms.Padding(4);
+            this.cboxPXzigbeePowerOnOffTestConditionAction1.Name = "cboxPXzigbeePowerOnOffTestConditionAction1";
+            this.cboxPXzigbeePowerOnOffTestConditionAction1.Size = new System.Drawing.Size(140, 24);
+            this.cboxPXzigbeePowerOnOffTestConditionAction1.TabIndex = 0;
+            this.cboxPXzigbeePowerOnOffTestConditionAction1.SelectedIndexChanged += new System.EventHandler(this.cboxPXzigbeePowerOnOffTestConditionAction1_SelectedIndexChanged);
+            // 
+            // btnPXzigbeePowerOnOffTestConditionLoadSetting
+            // 
+            this.btnPXzigbeePowerOnOffTestConditionLoadSetting.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPXzigbeePowerOnOffTestConditionLoadSetting.Location = new System.Drawing.Point(1045, 210);
+            this.btnPXzigbeePowerOnOffTestConditionLoadSetting.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPXzigbeePowerOnOffTestConditionLoadSetting.Name = "btnPXzigbeePowerOnOffTestConditionLoadSetting";
+            this.btnPXzigbeePowerOnOffTestConditionLoadSetting.Size = new System.Drawing.Size(108, 44);
+            this.btnPXzigbeePowerOnOffTestConditionLoadSetting.TabIndex = 11;
+            this.btnPXzigbeePowerOnOffTestConditionLoadSetting.Text = "Load Setting";
+            this.btnPXzigbeePowerOnOffTestConditionLoadSetting.UseVisualStyleBackColor = true;
+            this.btnPXzigbeePowerOnOffTestConditionLoadSetting.Click += new System.EventHandler(this.btnPXzigbeePowerOnOffTestConditionLoadSetting_Click);
+            // 
+            // btnPXzigbeePowerOnOffTestConditionSaveSetting
+            // 
+            this.btnPXzigbeePowerOnOffTestConditionSaveSetting.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPXzigbeePowerOnOffTestConditionSaveSetting.Location = new System.Drawing.Point(1045, 164);
+            this.btnPXzigbeePowerOnOffTestConditionSaveSetting.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPXzigbeePowerOnOffTestConditionSaveSetting.Name = "btnPXzigbeePowerOnOffTestConditionSaveSetting";
+            this.btnPXzigbeePowerOnOffTestConditionSaveSetting.Size = new System.Drawing.Size(108, 44);
+            this.btnPXzigbeePowerOnOffTestConditionSaveSetting.TabIndex = 10;
+            this.btnPXzigbeePowerOnOffTestConditionSaveSetting.Text = "Save Setting";
+            this.btnPXzigbeePowerOnOffTestConditionSaveSetting.UseVisualStyleBackColor = true;
+            this.btnPXzigbeePowerOnOffTestConditionSaveSetting.Click += new System.EventHandler(this.btnPXzigbeePowerOnOffTestConditionSaveSetting_Click);
+            // 
+            // btnPXzigbeePowerOnOffTestConditionEditSetting
+            // 
+            this.btnPXzigbeePowerOnOffTestConditionEditSetting.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPXzigbeePowerOnOffTestConditionEditSetting.Location = new System.Drawing.Point(1045, 111);
+            this.btnPXzigbeePowerOnOffTestConditionEditSetting.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPXzigbeePowerOnOffTestConditionEditSetting.Name = "btnPXzigbeePowerOnOffTestConditionEditSetting";
+            this.btnPXzigbeePowerOnOffTestConditionEditSetting.Size = new System.Drawing.Size(108, 44);
+            this.btnPXzigbeePowerOnOffTestConditionEditSetting.TabIndex = 9;
+            this.btnPXzigbeePowerOnOffTestConditionEditSetting.Text = "Edit";
+            this.btnPXzigbeePowerOnOffTestConditionEditSetting.UseVisualStyleBackColor = true;
+            this.btnPXzigbeePowerOnOffTestConditionEditSetting.Click += new System.EventHandler(this.btnPXzigbeePowerOnOffTestConditionEditSetting_Click);
+            // 
+            // btnPXzigbeePowerOnOffTestConditionAddSetting
+            // 
+            this.btnPXzigbeePowerOnOffTestConditionAddSetting.Font = new System.Drawing.Font("Calibri", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPXzigbeePowerOnOffTestConditionAddSetting.Location = new System.Drawing.Point(1045, 65);
+            this.btnPXzigbeePowerOnOffTestConditionAddSetting.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPXzigbeePowerOnOffTestConditionAddSetting.Name = "btnPXzigbeePowerOnOffTestConditionAddSetting";
+            this.btnPXzigbeePowerOnOffTestConditionAddSetting.Size = new System.Drawing.Size(108, 44);
+            this.btnPXzigbeePowerOnOffTestConditionAddSetting.TabIndex = 8;
+            this.btnPXzigbeePowerOnOffTestConditionAddSetting.Text = "Add";
+            this.btnPXzigbeePowerOnOffTestConditionAddSetting.UseVisualStyleBackColor = true;
+            this.btnPXzigbeePowerOnOffTestConditionAddSetting.Click += new System.EventHandler(this.btnPXzigbeePowerOnOffTestConditionAddSetting_Click);
+            // 
+            // dgvPXzigbeePowerOnOffTestConditionData
+            // 
+            this.dgvPXzigbeePowerOnOffTestConditionData.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.DisplayedCellsExceptHeader;
+            dataGridViewCellStyle37.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle37.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle37.Font = new System.Drawing.Font("PMingLiU", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle37.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle37.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle37.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle37.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPXzigbeePowerOnOffTestConditionData.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle37;
+            this.dgvPXzigbeePowerOnOffTestConditionData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle38.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle38.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle38.Font = new System.Drawing.Font("PMingLiU", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle38.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle38.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle38.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle38.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPXzigbeePowerOnOffTestConditionData.DefaultCellStyle = dataGridViewCellStyle38;
+            this.dgvPXzigbeePowerOnOffTestConditionData.Location = new System.Drawing.Point(8, 329);
+            this.dgvPXzigbeePowerOnOffTestConditionData.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvPXzigbeePowerOnOffTestConditionData.Name = "dgvPXzigbeePowerOnOffTestConditionData";
+            dataGridViewCellStyle39.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle39.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle39.Font = new System.Drawing.Font("PMingLiU", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle39.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle39.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle39.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle39.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPXzigbeePowerOnOffTestConditionData.RowHeadersDefaultCellStyle = dataGridViewCellStyle39;
+            this.dgvPXzigbeePowerOnOffTestConditionData.RowTemplate.Height = 24;
+            this.dgvPXzigbeePowerOnOffTestConditionData.Size = new System.Drawing.Size(1153, 215);
+            this.dgvPXzigbeePowerOnOffTestConditionData.TabIndex = 0;
+            this.dgvPXzigbeePowerOnOffTestConditionData.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPXzigbeePowerOnOffTestConditionData_CellContentClick);
+            // 
+            // tp_PXzigbeePowerOnOffFunctionTest
+            // 
+            this.tp_PXzigbeePowerOnOffFunctionTest.BackColor = System.Drawing.Color.Azure;
+            this.tp_PXzigbeePowerOnOffFunctionTest.Controls.Add(this.groupBox49);
+            this.tp_PXzigbeePowerOnOffFunctionTest.Controls.Add(this.gbox_PXzigbeePowerOnOffFunctionTestSetting);
+            this.tp_PXzigbeePowerOnOffFunctionTest.Controls.Add(this.btnPXzigbeePowerOnOffFunctionTestRun);
+            this.tp_PXzigbeePowerOnOffFunctionTest.Controls.Add(this.groupBox76);
+            this.tp_PXzigbeePowerOnOffFunctionTest.Controls.Add(this.label322);
+            this.tp_PXzigbeePowerOnOffFunctionTest.Location = new System.Drawing.Point(4, 25);
+            this.tp_PXzigbeePowerOnOffFunctionTest.Margin = new System.Windows.Forms.Padding(4);
+            this.tp_PXzigbeePowerOnOffFunctionTest.Name = "tp_PXzigbeePowerOnOffFunctionTest";
+            this.tp_PXzigbeePowerOnOffFunctionTest.Padding = new System.Windows.Forms.Padding(4);
+            this.tp_PXzigbeePowerOnOffFunctionTest.Size = new System.Drawing.Size(1175, 553);
+            this.tp_PXzigbeePowerOnOffFunctionTest.TabIndex = 1;
+            this.tp_PXzigbeePowerOnOffFunctionTest.Text = "PX Zigbee Power On Off Function Test";
+            // 
+            // groupBox49
+            // 
+            this.groupBox49.Controls.Add(this.dgvPXzigbeePowerOnOffFunctionTestStatus);
+            this.groupBox49.Location = new System.Drawing.Point(9, 54);
+            this.groupBox49.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox49.Name = "groupBox49";
+            this.groupBox49.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox49.Size = new System.Drawing.Size(620, 196);
+            this.groupBox49.TabIndex = 20;
+            this.groupBox49.TabStop = false;
+            this.groupBox49.Text = "Status";
+            // 
+            // dgvPXzigbeePowerOnOffFunctionTestStatus
+            // 
+            dataGridViewCellStyle40.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle40.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle40.Font = new System.Drawing.Font("PMingLiU", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle40.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle40.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle40.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle40.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPXzigbeePowerOnOffFunctionTestStatus.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle40;
+            this.dgvPXzigbeePowerOnOffFunctionTestStatus.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridViewCellStyle41.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle41.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle41.Font = new System.Drawing.Font("PMingLiU", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle41.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle41.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle41.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle41.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvPXzigbeePowerOnOffFunctionTestStatus.DefaultCellStyle = dataGridViewCellStyle41;
+            this.dgvPXzigbeePowerOnOffFunctionTestStatus.Location = new System.Drawing.Point(18, 20);
+            this.dgvPXzigbeePowerOnOffFunctionTestStatus.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvPXzigbeePowerOnOffFunctionTestStatus.Name = "dgvPXzigbeePowerOnOffFunctionTestStatus";
+            dataGridViewCellStyle42.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle42.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle42.Font = new System.Drawing.Font("PMingLiU", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(136)));
+            dataGridViewCellStyle42.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle42.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle42.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle42.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvPXzigbeePowerOnOffFunctionTestStatus.RowHeadersDefaultCellStyle = dataGridViewCellStyle42;
+            this.dgvPXzigbeePowerOnOffFunctionTestStatus.RowTemplate.Height = 24;
+            this.dgvPXzigbeePowerOnOffFunctionTestStatus.Size = new System.Drawing.Size(580, 167);
+            this.dgvPXzigbeePowerOnOffFunctionTestStatus.TabIndex = 18;
+            // 
+            // gbox_PXzigbeePowerOnOffFunctionTestSetting
+            // 
+            this.gbox_PXzigbeePowerOnOffFunctionTestSetting.Controls.Add(this.nudPXzigbeePowerOnOffFunctionTestTimes);
+            this.gbox_PXzigbeePowerOnOffFunctionTestSetting.Controls.Add(this.label320);
+            this.gbox_PXzigbeePowerOnOffFunctionTestSetting.Controls.Add(this.txtPXzigbeePowerOnOffFunctionTestName);
+            this.gbox_PXzigbeePowerOnOffFunctionTestSetting.Controls.Add(this.label321);
+            this.gbox_PXzigbeePowerOnOffFunctionTestSetting.Controls.Add(this.cboxPXzigbeePowerOnOffFunctionTestStopWhenTestFailed);
+            this.gbox_PXzigbeePowerOnOffFunctionTestSetting.Location = new System.Drawing.Point(641, 53);
+            this.gbox_PXzigbeePowerOnOffFunctionTestSetting.Margin = new System.Windows.Forms.Padding(4);
+            this.gbox_PXzigbeePowerOnOffFunctionTestSetting.Name = "gbox_PXzigbeePowerOnOffFunctionTestSetting";
+            this.gbox_PXzigbeePowerOnOffFunctionTestSetting.Padding = new System.Windows.Forms.Padding(4);
+            this.gbox_PXzigbeePowerOnOffFunctionTestSetting.Size = new System.Drawing.Size(386, 196);
+            this.gbox_PXzigbeePowerOnOffFunctionTestSetting.TabIndex = 15;
+            this.gbox_PXzigbeePowerOnOffFunctionTestSetting.TabStop = false;
+            this.gbox_PXzigbeePowerOnOffFunctionTestSetting.Text = "Test Setting";
+            // 
+            // nudPXzigbeePowerOnOffFunctionTestTimes
+            // 
+            this.nudPXzigbeePowerOnOffFunctionTestTimes.Increment = new decimal(new int[] {
+            500,
+            0,
+            0,
+            0});
+            this.nudPXzigbeePowerOnOffFunctionTestTimes.Location = new System.Drawing.Point(176, 90);
+            this.nudPXzigbeePowerOnOffFunctionTestTimes.Margin = new System.Windows.Forms.Padding(4);
+            this.nudPXzigbeePowerOnOffFunctionTestTimes.Maximum = new decimal(new int[] {
+            1000000000,
+            0,
+            0,
+            0});
+            this.nudPXzigbeePowerOnOffFunctionTestTimes.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.nudPXzigbeePowerOnOffFunctionTestTimes.Name = "nudPXzigbeePowerOnOffFunctionTestTimes";
+            this.nudPXzigbeePowerOnOffFunctionTestTimes.Size = new System.Drawing.Size(121, 25);
+            this.nudPXzigbeePowerOnOffFunctionTestTimes.TabIndex = 3;
+            this.nudPXzigbeePowerOnOffFunctionTestTimes.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nudPXzigbeePowerOnOffFunctionTestTimes.Value = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            // 
+            // label320
+            // 
+            this.label320.AutoSize = true;
+            this.label320.Location = new System.Drawing.Point(100, 94);
+            this.label320.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label320.Name = "label320";
+            this.label320.Size = new System.Drawing.Size(74, 15);
+            this.label320.TabIndex = 2;
+            this.label320.Text = "Test Times:";
+            // 
+            // txtPXzigbeePowerOnOffFunctionTestName
+            // 
+            this.txtPXzigbeePowerOnOffFunctionTestName.Location = new System.Drawing.Point(105, 45);
+            this.txtPXzigbeePowerOnOffFunctionTestName.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPXzigbeePowerOnOffFunctionTestName.Name = "txtPXzigbeePowerOnOffFunctionTestName";
+            this.txtPXzigbeePowerOnOffFunctionTestName.Size = new System.Drawing.Size(220, 25);
+            this.txtPXzigbeePowerOnOffFunctionTestName.TabIndex = 1;
+            this.txtPXzigbeePowerOnOffFunctionTestName.Text = "PX zigbee Power On/Off";
+            this.txtPXzigbeePowerOnOffFunctionTestName.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // label321
+            // 
+            this.label321.AutoSize = true;
+            this.label321.Location = new System.Drawing.Point(33, 49);
+            this.label321.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label321.Name = "label321";
+            this.label321.Size = new System.Drawing.Size(76, 15);
+            this.label321.TabIndex = 0;
+            this.label321.Text = "Test Name: ";
+            // 
+            // cboxPXzigbeePowerOnOffFunctionTestStopWhenTestFailed
+            // 
+            this.cboxPXzigbeePowerOnOffFunctionTestStopWhenTestFailed.AutoSize = true;
+            this.cboxPXzigbeePowerOnOffFunctionTestStopWhenTestFailed.Checked = true;
+            this.cboxPXzigbeePowerOnOffFunctionTestStopWhenTestFailed.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.cboxPXzigbeePowerOnOffFunctionTestStopWhenTestFailed.Font = new System.Drawing.Font("Cambria", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cboxPXzigbeePowerOnOffFunctionTestStopWhenTestFailed.Location = new System.Drawing.Point(103, 125);
+            this.cboxPXzigbeePowerOnOffFunctionTestStopWhenTestFailed.Margin = new System.Windows.Forms.Padding(4);
+            this.cboxPXzigbeePowerOnOffFunctionTestStopWhenTestFailed.Name = "cboxPXzigbeePowerOnOffFunctionTestStopWhenTestFailed";
+            this.cboxPXzigbeePowerOnOffFunctionTestStopWhenTestFailed.Size = new System.Drawing.Size(181, 24);
+            this.cboxPXzigbeePowerOnOffFunctionTestStopWhenTestFailed.TabIndex = 4;
+            this.cboxPXzigbeePowerOnOffFunctionTestStopWhenTestFailed.Text = "Stop when test failed";
+            this.cboxPXzigbeePowerOnOffFunctionTestStopWhenTestFailed.UseVisualStyleBackColor = true;
+            // 
+            // btnPXzigbeePowerOnOffFunctionTestRun
+            // 
+            this.btnPXzigbeePowerOnOffFunctionTestRun.Font = new System.Drawing.Font("Calibri", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPXzigbeePowerOnOffFunctionTestRun.Location = new System.Drawing.Point(1056, 205);
+            this.btnPXzigbeePowerOnOffFunctionTestRun.Margin = new System.Windows.Forms.Padding(4);
+            this.btnPXzigbeePowerOnOffFunctionTestRun.Name = "btnPXzigbeePowerOnOffFunctionTestRun";
+            this.btnPXzigbeePowerOnOffFunctionTestRun.Size = new System.Drawing.Size(91, 42);
+            this.btnPXzigbeePowerOnOffFunctionTestRun.TabIndex = 13;
+            this.btnPXzigbeePowerOnOffFunctionTestRun.Text = "Run";
+            this.btnPXzigbeePowerOnOffFunctionTestRun.UseVisualStyleBackColor = true;
+            this.btnPXzigbeePowerOnOffFunctionTestRun.Click += new System.EventHandler(this.btnPXzigbeePowerOnOffFunctionTestRun_Click);
+            // 
+            // groupBox76
+            // 
+            this.groupBox76.Controls.Add(this.txtPXzigbeePowerOnOffFunctionTestInformation);
+            this.groupBox76.Location = new System.Drawing.Point(8, 254);
+            this.groupBox76.Margin = new System.Windows.Forms.Padding(4);
+            this.groupBox76.Name = "groupBox76";
+            this.groupBox76.Padding = new System.Windows.Forms.Padding(4);
+            this.groupBox76.Size = new System.Drawing.Size(1154, 284);
+            this.groupBox76.TabIndex = 12;
+            this.groupBox76.TabStop = false;
+            this.groupBox76.Text = "Information";
+            // 
+            // txtPXzigbeePowerOnOffFunctionTestInformation
+            // 
+            this.txtPXzigbeePowerOnOffFunctionTestInformation.Location = new System.Drawing.Point(12, 26);
+            this.txtPXzigbeePowerOnOffFunctionTestInformation.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPXzigbeePowerOnOffFunctionTestInformation.Multiline = true;
+            this.txtPXzigbeePowerOnOffFunctionTestInformation.Name = "txtPXzigbeePowerOnOffFunctionTestInformation";
+            this.txtPXzigbeePowerOnOffFunctionTestInformation.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.txtPXzigbeePowerOnOffFunctionTestInformation.Size = new System.Drawing.Size(1131, 246);
+            this.txtPXzigbeePowerOnOffFunctionTestInformation.TabIndex = 1;
+            // 
+            // label322
+            // 
+            this.label322.Font = new System.Drawing.Font("Microsoft Sans Serif", 21F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label322.ForeColor = System.Drawing.Color.MediumBlue;
+            this.label322.Location = new System.Drawing.Point(8, 1);
+            this.label322.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label322.Name = "label322";
+            this.label322.Size = new System.Drawing.Size(1156, 60);
+            this.label322.TabIndex = 11;
+            this.label322.Text = "PX Zigbee Power On/Off Function Test Control Panel";
+            this.label322.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // RouterTestMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1200, 804);
+            this.Controls.Add(this.PXzigbeePowerOnOff_tabControl);
             this.Controls.Add(this.labElapsedTime);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.pictureBox1);
@@ -12788,6 +13794,23 @@
             this.gbox_ModelWebGuiFwUpDnGrade.ResumeLayout(false);
             this.gbox_ModelWebGuiFwUpDnGrade.PerformLayout();
             this.SallyTestPage.ResumeLayout(false);
+            this.PXzigbeePowerOnOff_tabControl.ResumeLayout(false);
+            this.tp_PXzigbeePowerOnOffTestCondition.ResumeLayout(false);
+            this.gbox_PXzigbeePowerOnOffTestConditionDeviceSetting.ResumeLayout(false);
+            this.gbox_PXzigbeePowerOnOffTestConditionDeviceSetting.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPXzigbeePowerOnOffTestConditionAction4SleepTimer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPXzigbeePowerOnOffTestConditionAction3SleepTimer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPXzigbeePowerOnOffTestConditionAction2SleepTimer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPXzigbeePowerOnOffTestConditionAction1SleepTimer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPXzigbeePowerOnOffTestConditionData)).EndInit();
+            this.tp_PXzigbeePowerOnOffFunctionTest.ResumeLayout(false);
+            this.groupBox49.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvPXzigbeePowerOnOffFunctionTestStatus)).EndInit();
+            this.gbox_PXzigbeePowerOnOffFunctionTestSetting.ResumeLayout(false);
+            this.gbox_PXzigbeePowerOnOffFunctionTestSetting.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPXzigbeePowerOnOffFunctionTestTimes)).EndInit();
+            this.groupBox76.ResumeLayout(false);
+            this.groupBox76.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -13687,6 +14710,67 @@
         private System.Windows.Forms.Label label155;
         private System.Windows.Forms.TextBox txtPowerOnOffTestConditionLoginID;
         private System.Windows.Forms.Label label154;
+        private System.Windows.Forms.Label label156;
+        private System.Windows.Forms.ComboBox cboxPowerOnOffTestConditionAction3;
+        private System.Windows.Forms.ComboBox cboxPowerOnOffTestConditionSSD3;
+        private System.Windows.Forms.ComboBox cboxPowerOnOffTestConditionSSD2;
+        private System.Windows.Forms.ComboBox cboxPowerOnOffTestConditionSSD1;
+        private System.Windows.Forms.Label label159;
+        private System.Windows.Forms.Label label158;
+        private System.Windows.Forms.Label label157;
+        private System.Windows.Forms.ToolStripMenuItem pxZigbeePowerOnOffTestToolStripMenuItem;
+        private System.Windows.Forms.TabControl PXzigbeePowerOnOff_tabControl;
+        private System.Windows.Forms.TabPage tp_PXzigbeePowerOnOffTestCondition;
+        private System.Windows.Forms.GroupBox gbox_PXzigbeePowerOnOffTestConditionDeviceSetting;
+        private System.Windows.Forms.TextBox txtPXzigbeePowerOnOffTestConditionModelName;
+        private System.Windows.Forms.Label label306;
+        private System.Windows.Forms.TextBox txtPXzigbeePowerOnOffTestConditionIP;
+        private System.Windows.Forms.Label label308;
+        private System.Windows.Forms.Label label309;
+        private System.Windows.Forms.ComboBox cboxPXzigbeePowerOnOffTestConditionAction1;
+        private System.Windows.Forms.Button btnPXzigbeePowerOnOffTestConditionLoadSetting;
+        private System.Windows.Forms.Button btnPXzigbeePowerOnOffTestConditionSaveSetting;
+        private System.Windows.Forms.Button btnPXzigbeePowerOnOffTestConditionEditSetting;
+        private System.Windows.Forms.Button btnPXzigbeePowerOnOffTestConditionAddSetting;
+        private System.Windows.Forms.DataGridView dgvPXzigbeePowerOnOffTestConditionData;
+        private System.Windows.Forms.TabPage tp_PXzigbeePowerOnOffFunctionTest;
+        private System.Windows.Forms.GroupBox groupBox49;
+        private System.Windows.Forms.DataGridView dgvPXzigbeePowerOnOffFunctionTestStatus;
+        private System.Windows.Forms.CheckBox cboxPXzigbeePowerOnOffFunctionTestStopWhenTestFailed;
+        private System.Windows.Forms.GroupBox gbox_PXzigbeePowerOnOffFunctionTestSetting;
+        private System.Windows.Forms.NumericUpDown nudPXzigbeePowerOnOffFunctionTestTimes;
+        private System.Windows.Forms.Label label320;
+        private System.Windows.Forms.TextBox txtPXzigbeePowerOnOffFunctionTestName;
+        private System.Windows.Forms.Label label321;
+        private System.Windows.Forms.Button btnPXzigbeePowerOnOffFunctionTestRun;
+        private System.Windows.Forms.GroupBox groupBox76;
+        private System.Windows.Forms.TextBox txtPXzigbeePowerOnOffFunctionTestInformation;
+        private System.Windows.Forms.Label label322;
+        private System.Windows.Forms.Label label323;
+        private System.Windows.Forms.TextBox txtPXzigbeePowerOnOffTestConditionMqttCmdPath;
+        private System.Windows.Forms.Label label312;
+        private System.Windows.Forms.TextBox txtPXzigbeePowerOnOffTestConditionNodeID;
+        private System.Windows.Forms.Label label307;
+        private System.Windows.Forms.Label label326;
+        private System.Windows.Forms.NumericUpDown nudPXzigbeePowerOnOffTestConditionAction1SleepTimer;
+        private System.Windows.Forms.Label label327;
+        private System.Windows.Forms.Label labelPXzigbeePowerOnOffTestConditionExecutionStep;
+        private System.Windows.Forms.Label label301;
+        private System.Windows.Forms.NumericUpDown nudPXzigbeePowerOnOffTestConditionAction2SleepTimer;
+        private System.Windows.Forms.Label label302;
+        private System.Windows.Forms.Label label303;
+        private System.Windows.Forms.ComboBox cboxPXzigbeePowerOnOffTestConditionAction2;
+        private System.Windows.Forms.Label label314;
+        private System.Windows.Forms.NumericUpDown nudPXzigbeePowerOnOffTestConditionAction4SleepTimer;
+        private System.Windows.Forms.Label label318;
+        private System.Windows.Forms.Label label324;
+        private System.Windows.Forms.ComboBox cboxPXzigbeePowerOnOffTestConditionAction4;
+        private System.Windows.Forms.Label label304;
+        private System.Windows.Forms.NumericUpDown nudPXzigbeePowerOnOffTestConditionAction3SleepTimer;
+        private System.Windows.Forms.Label label305;
+        private System.Windows.Forms.Label label313;
+        private System.Windows.Forms.ComboBox cboxPXzigbeePowerOnOffTestConditionAction3;
+        private System.Windows.Forms.Label labelPXzigbeePowerOnOffTestConditionCMD;
     }
 }
 

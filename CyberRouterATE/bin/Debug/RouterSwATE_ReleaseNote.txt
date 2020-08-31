@@ -1,3 +1,18 @@
+V1.0.2020.0828 :
+	Release Date: 2020/08/28
+	Release History:
+		New Item:
+				  1. PX Zigbee Power On/Off Test
+
+		Fixed Issue: 
+				  None
+
+		All Items: 
+				  1. PX Zigbee Power On/Off Test	v1.0.2020.0828
+
+
+------------------------------------------------------------------------------------------------------------------
+
 V1.0.2020.0715 :
 	Release Date: 2020/07/15
 	Release History:

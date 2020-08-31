@@ -23,6 +23,7 @@ using System.Windows.Forms;
 using System.Diagnostics;
 using System.Reflection;
 using Microsoft.Win32;
+using System.Threading;
 using System.IO;
 
 namespace CyberRouterATE
@@ -52,20 +53,97 @@ namespace CyberRouterATE
         string sConsoleLogFilePath = System.Windows.Forms.Application.StartupPath + @"\ConsoleLog.txt";
         Dictionary<int, string> dic_LineAuth = new Dictionary<int, string>();
 
+        //string startupPath = System.Windows.Forms.Application.StartupPath;
+
         public RouterTestMain()
         {
             InitializeComponent();
 
+            #region Test Code
             //--- Write File Example ---//
             //string DebugFilePath = System.Windows.Forms.Application.StartupPath + @"\DebugMessage.txt";
             //System.IO.StreamWriter WriteDebugMsg;
             //WriteDebugMsg = new System.IO.StreamWriter(DebugFilePath);
+            //WriteDebugMsg.AutoFlush = true;
             //WriteDebugMsg.Write("FFFFFFFFFFFFFFFF");  //Write()     不換行
             //WriteDebugMsg.WriteLine("       TTTT");   //WriteLine() 會換行
             //WriteDebugMsg.WriteLine("Test12345");
             //WriteDebugMsg.Close();
 
+
+
+            //--- Read/Write Cmd ---//
+            //CmdTest();
+
+            //ProcessTest();
+            //CmdProcessTest();
+            //DictTest();
+
+
+            /*
+            string ip = "192.168.18.1";
+            string id = "0xAB24";
+            string PowerOnCmd  = String.Format("-h {0} -t \"gw/commands\" -q 2 -m \"{{\\\"commands\\\":[{{\\\"commandcli\\\":\\\"zcl on-off on\\\"}},{{\\\"commandcli\\\":\\\"send {1} 1 0xFF\\\"}}]}}\"", ip, id);
+            string PowerOffCmd = String.Format("-h {0} -t \"gw/commands\" -q 2 -m \"{{\\\"commands\\\":[{{\\\"commandcli\\\":\\\"zcl on-off off\\\"}},{{\\\"commandcli\\\":\\\"send {1} 1 0xFF\\\"}}]}}\"", ip, id);
+            
+            //Process.Start("\"C:\\Program Files\\Project X\\mos158\\mosquitto_pub.exe\"", PowerOnCmd);
+            //Thread.Sleep(3000);
+            //Process.Start("\"C:\\Program Files\\Project X\\mos158\\mosquitto_pub.exe\"", PowerOffCmd);
+            
+
+            
+            Process PowerOnProcess = new Process();
+            ProcessStartInfo PowerOnstartInfo = new ProcessStartInfo();
+            PowerOnstartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+            PowerOnstartInfo.CreateNoWindow = true;
+            PowerOnstartInfo.FileName = "\"C:\\Program Files\\Project X\\mos158\\mosquitto_pub.exe\"";
+            PowerOnstartInfo.Arguments = PowerOnCmd;
+            PowerOnstartInfo.WorkingDirectory = System.Windows.Forms.Application.StartupPath;
+            PowerOnstartInfo.UseShellExecute = false;
+            PowerOnstartInfo.RedirectStandardOutput = true;
+            PowerOnstartInfo.RedirectStandardError = true;
+            PowerOnstartInfo.RedirectStandardInput = true;
+            PowerOnProcess.StartInfo = PowerOnstartInfo;
+
+
+            Process PowerOffProcess = new Process();
+            ProcessStartInfo PowerOffstartInfo = new ProcessStartInfo();
+            PowerOffstartInfo.WindowStyle = ProcessWindowStyle.Hidden;
+            PowerOffstartInfo.CreateNoWindow = true;
+            PowerOffstartInfo.FileName = "\"C:\\Program Files\\Project X\\mos158\\mosquitto_pub.exe\"";
+            PowerOffstartInfo.Arguments = PowerOffCmd;
+            PowerOffstartInfo.WorkingDirectory = System.Windows.Forms.Application.StartupPath;
+            PowerOffstartInfo.UseShellExecute = false;
+            PowerOffstartInfo.RedirectStandardOutput = true;
+            PowerOffstartInfo.RedirectStandardError = true;
+            PowerOffstartInfo.RedirectStandardInput = true;
+            PowerOffProcess.StartInfo = PowerOffstartInfo;
+
+
+            PowerOnProcess.Start();
+            PowerOnProcess.WaitForExit();
+            PowerOnProcess.Close();
+            Thread.Sleep(2000);
+
+            PowerOffProcess.Start();
+            PowerOffProcess.WaitForExit();
+            PowerOffProcess.Close();
+            Thread.Sleep(2000);
+
+            PowerOnProcess.Start();
+            PowerOnProcess.WaitForExit();
+            PowerOnProcess.Close();
+            Thread.Sleep(2000);
+
+            PowerOffProcess.Start();
+            PowerOffProcess.WaitForExit();
+            PowerOffProcess.Close();
+            */
+
+            //Process.Start("ipconfig");
+            #endregion
         }
+
 
         /// <summary>
         /// OnLoad event
@@ -259,11 +337,234 @@ namespace CyberRouterATE
 
         }
 
-                
-       
-/*============================================================================================*/
-/*====================== From now on, Function need to update ================================*/
-/*============================================================================================*/
+
+
+
+
+        //====================================================================//
+        //--------------------------  Test Area ------------------------------//
+        //====================================================================//
+        #region Test Area
+
+        private void CmdTest()
+        {
+            //string RunCheckSSDbatPath  = startupPath + @"\RunCheckSSDbat.bat";
+            string RunWriteFileBatPath = startupPath + @"\RunWriteFileBat.bat";
+            string ThirdpartyToolsPath = startupPath + "\\ThirdpartyTools";
+            string PSToolsPath = ThirdpartyToolsPath + "\\PSTools";
+            string BatFilePath = ThirdpartyToolsPath + "\\WriteFile.bat";
+
+
+            //System.IO.StreamWriter WriteBatFile1;
+            //WriteBatFile1 = new System.IO.StreamWriter(RunCheckSSDbatPath);
+
+            //WriteBatFile2.WriteLine(RemoteCmd);
+            //WriteBatFile2.Close();
+
+            // psexec \\172.16.20.20 -u "Aspire E15" -p 123 -c -f C:\tmpFile\shutdown.bat
+            //string RemoteCmd = "psexec \\\\" + Parameter1 + " -u \"user\" -p \"user\" -c -f " + SystemSleepFile;
+            //string RemoteCmd = "psexec \\\\" + Parameter1 + " -u \"" + P1_LoginID + "\" -p \"" + P1_LoginPW + "\" -c -f " + SystemSleepFile;
+            string RemoteCmd = "psexec \\\\192.168.18.37 -u \"user\" -p \"user\" -c -f " + BatFilePath;
+            string PSpathCmd = "Cd " + PSToolsPath;
+
+            System.IO.StreamWriter WriteBatFile2;
+            WriteBatFile2 = new System.IO.StreamWriter(RunWriteFileBatPath);
+
+            WriteBatFile2.WriteLine(PSpathCmd);
+            WriteBatFile2.WriteLine(RemoteCmd);
+            WriteBatFile2.Close();
+
+            Process.Start(RunWriteFileBatPath);
+        }
+
+
+        struct GetLightStatusLog
+        {
+
+            public List<string> LogList;
+            //public int MyInt;
+
+            //public GetLightStatusLog(int myInt)
+            //{
+            //    MyInt = myInt;
+            //    LogList = new List<string>();
+            //}
+        }
+
+        private void DictTest()
+        {
+            Dictionary<string, GetLightStatusLog> DictGetLightStatus = new Dictionary<string, GetLightStatusLog>();
+            GetLightStatusLog structGetLightStatusLog = new GetLightStatusLog();
+            structGetLightStatusLog.LogList = new List<string>();
+
+            string DebugFilePath = System.Windows.Forms.Application.StartupPath + @"\DebugMessage.txt";
+            System.IO.StreamWriter WriteDebugMsg;
+            WriteDebugMsg = new System.IO.StreamWriter(DebugFilePath);
+            WriteDebugMsg.AutoFlush = true;
+
+            structGetLightStatusLog.LogList.Add("First Log Test");
+
+            DictGetLightStatus.Add("Node-1", structGetLightStatusLog);
+            
+            DictGetLightStatus["Node-1"].LogList.Add("2222222222");
+            DictGetLightStatus["Node-1"].LogList.Add("3333333333333");
+
+            WriteDebugMsg.WriteLine("LogList[0]:" + DictGetLightStatus["Node-1"].LogList[0]);
+
+            int LogListCount = DictGetLightStatus["Node-1"].LogList.Count;
+            WriteDebugMsg.WriteLine("DictGetLightStatus[\"Node-1\"].LogList.Count: " + LogListCount);
+
+
+            WriteDebugMsg.WriteLine("\n\nAll LogList:\n");
+            for (int i = 0; i < LogListCount; i++)
+            {
+                WriteDebugMsg.WriteLine(DictGetLightStatus["Node-1"].LogList[i]);
+            }
+
+            DictGetLightStatus["Node-1"].LogList.Clear();  //-------- Clear()
+            DictGetLightStatus["Node-1"].LogList.Add("New Data1");
+            DictGetLightStatus["Node-1"].LogList.Add("New Data2");
+            LogListCount = DictGetLightStatus["Node-1"].LogList.Count;
+            WriteDebugMsg.WriteLine("\n\nNew All LogList:\n");
+            for (int i = 0; i < LogListCount; i++)
+            {
+                WriteDebugMsg.WriteLine(DictGetLightStatus["Node-1"].LogList[i]);
+            }
+            
+            
+            
+            
+            WriteDebugMsg.Close();
+        
+
+        
+        }
+
+        private bool CmdProcessTest()
+        {
+            //mosquitto_pub -h 192.168.18.1 -t "gw/commands" -q 2 -m "{\"commands\":[{\"commandcli\":\"zcl global read 0x0006 0x0000\"},{\"commandcli\":\"send 0x1F57 1 0xff\"}]}"
+            string ip = "192.168.18.1";
+            string id = "0xAB24";
+            string cmd1 = String.Format("mosquitto_pub -h {0} -t \"gw/commands\" -q 2 -m \"{{\\\"commands\\\":[{{\\\"commandcli\\\":\\\"zcl global read 0x0006 0x0000\\\"}},{{\\\"commandcli\\\":\\\"send {1} 1 0xff\\\"}}]}}\"", ip, id);
+
+            Process StatusProcess = new Process();
+            ProcessStartInfo startInfo = new ProcessStartInfo();
+            startInfo.WindowStyle = ProcessWindowStyle.Hidden;
+            startInfo.CreateNoWindow = true;
+            startInfo.FileName = @"C:\Windows\System32" + "\\cmd.exe";
+            startInfo.WorkingDirectory = System.Windows.Forms.Application.StartupPath;
+
+            startInfo.UseShellExecute = false;
+            startInfo.RedirectStandardOutput = true;
+            startInfo.RedirectStandardError = true;
+            startInfo.RedirectStandardInput = true;
+            StatusProcess.StartInfo = startInfo;
+            StatusProcess.Start();
+
+            string onCmd = String.Format("mosquitto_pub -h {0} -t \"gw/commands\" -q 2 -m \"{{\\\"commands\\\":[{{\\\"commandcli\\\":\\\"zcl on-off on\\\"}},{{\\\"commandcli\\\":\\\"send {1} 1 0xFF\\\"}}]}}\"", ip, id);
+            string offCmd = String.Format("mosquitto_pub -h {0} -t \"gw/commands\" -q 2 -m \"{{\\\"commands\\\":[{{\\\"commandcli\\\":\\\"zcl on-off off\\\"}},{{\\\"commandcli\\\":\\\"send {1} 1 0xFF\\\"}}]}}\"", ip, id);
+
+
+            StatusProcess.StandardInput.WriteLine("C:");
+            StatusProcess.StandardInput.WriteLine(@"cd C:\Program Files\Project X\mos158");
+            //StatusProcess.StandardInput.WriteLine(cmd1);
+            //StatusProcess.StandardInput.WriteLine("mosquitto_sub -h 192.168.18.1 -t \"gw/zclresponse\" -q 2");
+            
+            StatusProcess.StandardInput.WriteLine(onCmd);
+            StatusProcess.StandardInput.WriteLine("timeout /t 5");
+            StatusProcess.StandardInput.WriteLine(offCmd);
+
+            string tempOutput = "";
+            string output = "";
+
+            string FilePath = startupPath + @"\GetStatusLog.txt";
+            System.IO.StreamWriter WriteLog;
+            WriteLog = new System.IO.StreamWriter(FilePath);
+
+
+            while ((tempOutput = StatusProcess.StandardOutput.ReadLine()) != null || (tempOutput = StatusProcess.StandardError.ReadLine()) != null)
+            {
+                //output += tempOutput + "\n";
+                output = tempOutput + "\n";
+                WriteLog.Flush();
+                WriteLog.WriteLine(output);
+                //if (output.Contains("gw/zclresponse"))
+                //    break;
+            }
+            WriteLog.Close();
+
+            
+            /*
+            string expectedOutput = @"""status"":200,""message"":""ok""";
+            if (output.Contains(expectedOutput) == false)
+            {
+                StatusProcess.WaitForExit();
+                StatusProcess.Close();
+                return false;
+            }*/
+
+            ////StatusProcess.WaitForExit();
+            ////StatusProcess.Close();
+            return true;
+        }   
+        
+        private bool ProcessTest()
+        {
+            Process process = new Process();
+            ProcessStartInfo startInfo = new ProcessStartInfo();
+            startInfo.WindowStyle = ProcessWindowStyle.Hidden;
+            startInfo.CreateNoWindow = true;
+            startInfo.FileName = @"C:\Windows\System32" + "\\cmd.exe";
+            startInfo.WorkingDirectory = System.Windows.Forms.Application.StartupPath;
+
+            startInfo.UseShellExecute = false;
+            startInfo.RedirectStandardOutput = true;
+            startInfo.RedirectStandardError = true;
+            startInfo.RedirectStandardInput = true;
+            process.StartInfo = startInfo;
+            process.Start();
+            process.StandardInput.WriteLine("ipconfig /all");
+            //process.StandardInput.WriteLine(@"curl -X POST -H ""Authorization:Bearer " + _authorization + @""" -F ""message=" + message + @""" " + _apiAddress);
+            process.StandardInput.WriteLine("exit");
+     
+            
+            string tempOutput = "";
+            string output = "";
+
+
+            while ((tempOutput = process.StandardOutput.ReadLine()) != null || (tempOutput = process.StandardError.ReadLine()) != null)
+            {
+                output += tempOutput + "\n";
+            }
+
+
+            string FilePath = startupPath + @"\Log.txt";
+            System.IO.StreamWriter WriteLog;
+            WriteLog = new System.IO.StreamWriter(FilePath);
+            WriteLog.WriteLine(output);
+            WriteLog.Close();
+            /*
+            string expectedOutput = @"""status"":200,""message"":""ok""";
+            if (output.Contains(expectedOutput) == false)
+            {
+                process.WaitForExit();
+                process.Close();
+                return false;
+            }*/
+
+            process.WaitForExit();
+            process.Close();
+            return true;
+        }
+        
+        #endregion //--------------------------------------------- Test Area
+
+
+
+
+        /*============================================================================================*/
+        /*====================== From now on, Function need to update ================================*/
+        /*============================================================================================*/
 
         
 
@@ -285,9 +586,11 @@ namespace CyberRouterATE
 			GuestNetworkTestToolStripMenuItem.Checked = false;
             chamberPerformanceTestToolStripMenuItem.Checked = false;
             integrationTestToolStripMenuItem.Checked = false;
+            pxZigbeePowerOnOffTestToolStripMenuItem.Checked = false;
 
             RvRTest_tabControl.Hide();
             PowerOnOff_tabControl.Hide();
+            PXzigbeePowerOnOff_tabControl.Hide();
             tmp_tabControl.Hide();
             tabControl_Interoperability.Hide();
             tabControl_Throughput.Hide();
@@ -440,19 +743,11 @@ namespace CyberRouterATE
 
         }
        
-
-        
-
         private void interOperabilityToolStripMenuItem_Click(object sender, EventArgs e)
         {
             
 
         }
-
-
-
-
-
 
 
         public class Constants
@@ -489,7 +784,6 @@ namespace CyberRouterATE
             /* Define Test Item name */
             public const string TESTITEM_THROUGHPUT         = "Throughput Test";
             public const string TESTITEM_POWER_ONOFF        = "Power On Off Test";          
-
         }
 
         System.IO.StreamWriter WriteDebugMsg;

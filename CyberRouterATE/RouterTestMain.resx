@@ -126,6 +126,11 @@
   <metadata name="timerElaspedTime.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>241, 18</value>
   </metadata>
+  <data name="labelPXzigbeePowerOnOffTestConditionCMD.Text" xml:space="preserve">
+    <value>&lt;Get Light Status Command&gt;
+mosquitto_pub -h 192.168.18.1 -t "gw/commands" -q 2 -m "{\"commands\":[{\"commandcli\":\"zcl global read 0x0006 0x0000\"},{\"commandcli\":\"send 0x1F57 1 0xff\"}]}"}"
+mosquitto_sub -h 192.168.18.1 -t "gw/zclresponse" -q 2</value>
+  </data>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>48</value>
   </metadata>
