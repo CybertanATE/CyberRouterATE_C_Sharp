@@ -12,6 +12,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
@@ -40,6 +41,8 @@ namespace CyberRouterATE
         adam4068 adm4068 = null;
         string logFileName = string.Empty;
         int iLogTestCondition = -1;
+
+        string startupPath = System.Windows.Forms.Application.StartupPath;
         
                
         /* Declare delegate function */
@@ -69,7 +72,8 @@ namespace CyberRouterATE
             tp_PowerOnOffFunctionTest.Parent = this.PowerOnOff_tabControl;           
 
 
-            cboxPowerOnOffTestConditionAction.SelectedIndex = 0;
+            cboxPowerOnOffTestConditionAction1.SelectedIndex = 0;
+            cboxPowerOnOffTestConditionAction2.SelectedIndex = 1;
 
             PowerOnOff_tabControl.Show();
             tsslMessage.Text = PowerOnOff_tabControl.TabPages[PowerOnOff_tabControl.SelectedIndex].Text + " Control Panel";
@@ -228,11 +232,16 @@ namespace CyberRouterATE
             string PowerOnTime;
             string PowerOffTime;
             string ModelName;
-            string Action;
+            string Action1;
+            string Action2;
+            string SleepTimer;
             string Parameter1;
+            string P1_LoginID;
+            string P1_LoginPW;
             string Parameter2;
             int iPowerPort = 0 ;
-            int MaxPowerOnTime = 1;//second
+            int iSleepTimer = 10;    //second
+            int MaxPowerOnTime = 1;  //second
             int MaxPowerOffTime = 1; //second
             int iMaxPowerOnTime = 1;
             int iMaxPowerOffTime = 1;
@@ -264,6 +273,7 @@ namespace CyberRouterATE
             /* File name , max power on/off time , port used process */
             for (int i = 0; i < dgvPowerOnOffTestConditionData.RowCount - 1; i++)
             {
+                #region
                 if (bRouterFTThreadRunning == false)
                 {
                     MessageBox.Show("Test Abort!!", "Warning");
@@ -272,16 +282,19 @@ namespace CyberRouterATE
                     threadRouterFT.Abort();
                 }
 
-                PowerPort = testConfigPowerOnOff[i, 0];
-                ModelName = testConfigPowerOnOff[i, 1];
-                Action = testConfigPowerOnOff[i, 2];
-                Parameter1 = testConfigPowerOnOff[i, 3];
-                Parameter2 = testConfigPowerOnOff[i, 4]; 
-
-                PowerOnTime = testConfigPowerOnOff[i, 5];
-                PowerOffTime = testConfigPowerOnOff[i, 6];                
+                PowerPort    = testConfigPowerOnOff[i, 0];
+                ModelName    = testConfigPowerOnOff[i, 1];
+                Action1      = testConfigPowerOnOff[i, 2];
+                Action2      = testConfigPowerOnOff[i, 3];
+                SleepTimer   = testConfigPowerOnOff[i, 4];
+                Parameter1   = testConfigPowerOnOff[i, 5];
+                P1_LoginID   = testConfigPowerOnOff[i, 6];
+                P1_LoginPW   = testConfigPowerOnOff[i, 7];
+                Parameter2   = testConfigPowerOnOff[i, 8]; 
+                PowerOnTime  = testConfigPowerOnOff[i, 9];
+                PowerOffTime = testConfigPowerOnOff[i, 10];                
                                 
-                testFileName[i] = createRouterPowerOnOffSavePath(m_PowerOnOffTestSubFolder, ModelName, Action, Parameter1, testTimes.ToString(), 1);
+                testFileName[i] = createRouterPowerOnOffSavePath(m_PowerOnOffTestSubFolder, ModelName, Action1, Parameter1, testTimes.ToString(), 1);
                 if(iLogTestCondition == i)
                 {
                     if (chkPowerOnOffFunctionTestComportLog.Checked)
@@ -338,6 +351,7 @@ namespace CyberRouterATE
 
                 TestPassCount[i] = 0;
                 TestFailCount[i] = 0;
+                #endregion
             }
 
             relayData = Convert.ToString(relayPort, 16);
@@ -353,18 +367,25 @@ namespace CyberRouterATE
 
             str = "=====================Start Testing==================";
             Invoke(new SetTextCallBackT(SetText), new object[] { str, txtPowerOnOffFunctionTestInformation });
-                                    
-            /* Turn off the relay first */
+            
+            //======================================//                        
+            //------ Turn off the relay first ------//
+            //======================================//
             adm4068.TurnOffRelay(Address4068);
             Thread.Sleep(iMaxPowerOffTime);
             str = "Turn Off Relay ";
             Invoke(new SetTextCallBackT(SetText), new object[] { str, txtPowerOnOffFunctionTestInformation });
 
             Stopwatch stopwatch = new Stopwatch();
-            stopwatch.Start();           
+            stopwatch.Start();
 
+
+            //======================================//
+            //----------- Main Test Loop -----------//
+            //======================================//
             for (int timesCount = 1; timesCount <= testTimes; timesCount++)
             {
+                #region Main Test Loop
                 /* Reset Test Status */
                 for (int item = 0; item < dgvPowerOnOffTestConditionData.RowCount - 1; item++)
                 {
@@ -379,7 +400,9 @@ namespace CyberRouterATE
                 this.Invoke(new ShowLabelTextDelegate(ShowLabelText), new object[] { labPowerOnOffFunctionTestTimes, timesCount.ToString() });
                 //labPowerOnOffFunctionTestTimes.Text = timesCount.ToString();
 
-                /* Turn on relay */
+                //----------------------------------//
+                //*** Test Step 1: Turn on relay ***//
+                //----------------------------------//
                 adm4068.TurnOnRelay(Address4068, relayData);
                 str = "Turn On Relay ";
                 Invoke(new SetTextCallBackT(SetText), new object[] { str, txtPowerOnOffFunctionTestInformation });
@@ -395,6 +418,7 @@ namespace CyberRouterATE
 
                 while (true)
                 {
+                    #region
                     if (bRouterFTThreadRunning == false)
                     {
                         MessageBox.Show("Test Abort", "Warning");
@@ -428,12 +452,15 @@ namespace CyberRouterATE
                         Invoke(new SetTextCallBackT(SetTextC), new object[] { str, txtPowerOnOffFunctionTestInformation });
                     }
                     Thread.Sleep(50);
+                    #endregion
                 }
                 
-
-                /* Do the action sequencely once */
+                //------------------------------------------------------//
+                //*** Test Step 2: Do the "Action 1" sequencely once ***//
+                //------------------------------------------------------//
                 for (int pingCount = 0; pingCount < Convert.ToInt32(nudPowerOnOffFunctionTestPingTimes.Value); pingCount++)
                 {
+                    #region
                     if (bRouterFTThreadRunning == false)
                     {
                         MessageBox.Show("Test Abort", "Warning");
@@ -454,6 +481,7 @@ namespace CyberRouterATE
                             threadRouterFT.Abort();
                         }
 
+                        /*
                         PowerPort = testConfigPowerOnOff[i, 0];
                         ModelName = testConfigPowerOnOff[i, 1];
                         Action = testConfigPowerOnOff[i, 2];
@@ -462,6 +490,19 @@ namespace CyberRouterATE
 
                         PowerOnTime = testConfigPowerOnOff[i, 5];
                         PowerOffTime = testConfigPowerOnOff[i, 6];
+                        */
+                        PowerPort    = testConfigPowerOnOff[i, 0];
+                        ModelName    = testConfigPowerOnOff[i, 1];
+                        Action1      = testConfigPowerOnOff[i, 2];
+                        Action2      = testConfigPowerOnOff[i, 3];
+                        SleepTimer   = testConfigPowerOnOff[i, 4];
+                        Parameter1   = testConfigPowerOnOff[i, 5];
+                        P1_LoginID   = testConfigPowerOnOff[i, 6];
+                        P1_LoginPW   = testConfigPowerOnOff[i, 7];
+                        Parameter2   = testConfigPowerOnOff[i, 8];
+                        PowerOnTime  = testConfigPowerOnOff[i, 9];
+                        PowerOffTime = testConfigPowerOnOff[i, 10];
+
 
                         if (chkPowerOnOffFunctionTestComportLog.Checked)
                         {
@@ -483,7 +524,7 @@ namespace CyberRouterATE
 
                         if (TestItemStatus[i] == 0)
                         {
-                            if (Action.ToLower() == "ping")
+                            if (Action1.ToLower() == "ping")
                             {
                                 str = "Power Port " + PowerPort + "/Device Name" + ModelName + " /Ping " + Parameter1;
                                 Invoke(new SetTextCallBackT(SetText), new object[] { str, txtPowerOnOffFunctionTestInformation });
@@ -573,10 +614,12 @@ namespace CyberRouterATE
                             }
                         }
                     }
+                    #endregion
                 }
 
                 for (int i = 0; i < dgvPowerOnOffTestConditionData.RowCount - 1; i++)
                 {
+                    #region
                     int timeNow = Convert.ToInt32(stopwatch.ElapsedMilliseconds / 1000);
                     str = "Time to record: " + timeNow.ToString(); ;
                     Invoke(new SetTextCallBackT(SetText), new object[] { str, txtPowerOnOffFunctionTestInformation });
@@ -614,6 +657,7 @@ namespace CyberRouterATE
                             break;
                         }                        
                     }
+                    #endregion
                 }
 
                 if (chkPowerOnOffFunctionTestComportLog.Checked)
@@ -650,8 +694,9 @@ namespace CyberRouterATE
                     this.Invoke(new showPowerOnOffFunctionTestGUIDelegate(TogglePowerOnOffFunctionTestGUI));
                     threadRouterFT.Abort();
                 }
+                Thread.Sleep(3000);
                 
-                
+                #region old code
                 //while (true)
                 //{
                     //int timePassed = Convert.ToInt32(stopwatch.ElapsedMilliseconds / 1000) + 1;
@@ -722,10 +767,82 @@ namespace CyberRouterATE
                     //    }
                     //}
                 //}
+                #endregion
+
+
+                //startupPath
+                //------------------------------------------------------//
+                //*** Test Step 3: Do the "Action 2" sequencely once ***//
+                //------------------------------------------------------//
+                //for (int i = 0; i < dgvPowerOnOffTestConditionData.RowCount - 1; i++)
+                //{
+
+                PowerPort    = testConfigPowerOnOff[0, 0];
+                ModelName    = testConfigPowerOnOff[0, 1];
+                Action1      = testConfigPowerOnOff[0, 2];
+                Action2      = testConfigPowerOnOff[0, 3];
+                SleepTimer   = testConfigPowerOnOff[0, 4];
+                Parameter1   = testConfigPowerOnOff[0, 5];
+                P1_LoginID   = testConfigPowerOnOff[0, 6];
+                P1_LoginPW   = testConfigPowerOnOff[0, 7];
+                Parameter2   = testConfigPowerOnOff[0, 8];
+                PowerOnTime  = testConfigPowerOnOff[0, 9];
+                PowerOffTime = testConfigPowerOnOff[0, 10];
+
+                if (Action2.CompareTo("System Sleep") == 0)
+                {
+                    str = "";  // 空一行
+                    Invoke(new SetTextCallBackT(SetText), new object[] { str, txtPowerOnOffFunctionTestInformation });
+                    str = "Remote System Go to Sleep Mode";
+                    Invoke(new SetTextCallBackT(SetText), new object[] { str, txtPowerOnOffFunctionTestInformation });
+
+                    //----------------------//
+                    //--- Write bat file ---//
+                    //----------------------//
+                    string batFilePath         = startupPath + @"\RemoteSystemSleep.bat";
+                    string ThirdpartyToolsPath = startupPath + "\\ThirdpartyTools";
+                    string PSToolsPath     = ThirdpartyToolsPath + "\\PSTools";
+                    string SystemSleepFile = ThirdpartyToolsPath + "\\SystemSleep\\shutdown.bat";
+
+                    // psexec \\172.16.20.20 -u "Aspire E15" -p 123 -c -f C:\tmpFile\shutdown.bat
+                    //string RemoteCmd = "psexec \\\\" + Parameter1 + " -u \"user\" -p \"user\" -c -f " + SystemSleepFile;
+                    string RemoteCmd = "psexec \\\\" + Parameter1 + " -u \"" + P1_LoginID + "\" -p \"" + P1_LoginPW + "\" -c -f " + SystemSleepFile;
+                    string PSpathCmd = "Cd " + PSToolsPath;
+
+                    System.IO.StreamWriter WriteBatFile;
+                    WriteBatFile = new System.IO.StreamWriter(batFilePath);
+
+                    WriteBatFile.WriteLine(PSpathCmd);
+                    WriteBatFile.WriteLine(RemoteCmd);
+                    WriteBatFile.Close();
+
+
+                    //----------------------//
+                    //---- Run bat file ----//
+                    //----------------------//
+                    Process.Start(batFilePath);
+                    Thread.Sleep(1000);
+
+
+                    str = "Wait for " + SleepTimer + " seconds";
+                    Invoke(new SetTextCallBackT(SetText), new object[] { str, txtPowerOnOffFunctionTestInformation });
+                    iSleepTimer = Convert.ToInt32(SleepTimer) * 1000;
+                    Thread.Sleep(iSleepTimer);
+
+                }
+
+                //}
+
+                
+
+                //-----------------------------------//
+                //*** Test Step 4: Turn off relay ***//
+                //-----------------------------------//
 
                 str = "Turn Off Relay ";
                 Invoke(new SetTextCallBackT(SetText), new object[] { str, txtPowerOnOffFunctionTestInformation });
 
+                //--Turn off relay
                 adm4068.TurnOffRelay(Address4068);
 
                 if (chkPowerOnOffFunctionTestComportLog.Checked)
@@ -751,10 +868,13 @@ namespace CyberRouterATE
                 }
 
                 str = "Next Turn ";
-                Invoke(new SetTextCallBackT(SetText), new object[] { str, txtPowerOnOffFunctionTestInformation }); 
+                Invoke(new SetTextCallBackT(SetText), new object[] { str, txtPowerOnOffFunctionTestInformation });
+                #endregion
             }
 
-            /* Write final result to csv */
+            //======================================//
+            //------ Write final result to csv -----//
+            //======================================//
             for (int item = 0; item < dgvPowerOnOffTestConditionData.RowCount - 1; item++)
             {
                 str = String.Format("{0}, {1}, {2}, {3}, {4}", "*******", "Passed", TestPassCount[item].ToString(), "Failed", TestFailCount[item].ToString());
@@ -813,11 +933,11 @@ namespace CyberRouterATE
 
         private bool ReadTestConfig_PowerOnOff()
         {
-            string[,] rowdata = new string[dgvPowerOnOffTestConditionData.RowCount - 1, 7];
+            string[,] rowdata = new string[dgvPowerOnOffTestConditionData.RowCount - 1, dgvPowerOnOffTestConditionData.ColumnCount];
 
             for (int i = 0; i < dgvPowerOnOffTestConditionData.RowCount - 1; i++)
             {
-                for (int j = 0; j < 7; j++)
+                for (int j = 0; j < dgvPowerOnOffTestConditionData.ColumnCount; j++)
                 {
                     rowdata[i, j] = dgvPowerOnOffTestConditionData.Rows[i].Cells[j].Value.ToString();
                 }
@@ -915,7 +1035,7 @@ namespace CyberRouterATE
             nudPowerOnOffTestConditionPowerOnTime.Enabled = Toggle;
             nudPowerOnOffTestConditionPowerOffTime.Enabled = Toggle;
             txtPowerOnOffTestConditionModelName.Enabled = Toggle;
-            cboxPowerOnOffTestConditionAction.Enabled = Toggle;
+            cboxPowerOnOffTestConditionAction1.Enabled = Toggle;
             txtPowerOnOffTestConditionParameter1.Enabled = Toggle;
             txtPowerOnOffTestConditionParameter2.Enabled = Toggle;
             btnPowerOnOffTestConditionAddSetting.Enabled = Toggle;

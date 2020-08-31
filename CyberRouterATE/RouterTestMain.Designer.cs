@@ -336,6 +336,15 @@
             this.label46 = new System.Windows.Forms.Label();
             this.label45 = new System.Windows.Forms.Label();
             this.groupBox14 = new System.Windows.Forms.GroupBox();
+            this.txtPowerOnOffTestConditionLoginPW = new System.Windows.Forms.TextBox();
+            this.label155 = new System.Windows.Forms.Label();
+            this.txtPowerOnOffTestConditionLoginID = new System.Windows.Forms.TextBox();
+            this.label154 = new System.Windows.Forms.Label();
+            this.label152 = new System.Windows.Forms.Label();
+            this.nudPowerOnOffTestConditionSleepTimer = new System.Windows.Forms.NumericUpDown();
+            this.label153 = new System.Windows.Forms.Label();
+            this.label151 = new System.Windows.Forms.Label();
+            this.cboxPowerOnOffTestConditionAction2 = new System.Windows.Forms.ComboBox();
             this.txtPowerOnOffTestConditionModelName = new System.Windows.Forms.TextBox();
             this.label48 = new System.Windows.Forms.Label();
             this.txtPowerOnOffTestConditionParameter2 = new System.Windows.Forms.TextBox();
@@ -343,7 +352,7 @@
             this.label44 = new System.Windows.Forms.Label();
             this.label43 = new System.Windows.Forms.Label();
             this.label42 = new System.Windows.Forms.Label();
-            this.cboxPowerOnOffTestConditionAction = new System.Windows.Forms.ComboBox();
+            this.cboxPowerOnOffTestConditionAction1 = new System.Windows.Forms.ComboBox();
             this.btnPowerOnOffTestConditionLoadSetting = new System.Windows.Forms.Button();
             this.btnPowerOnOffTestConditionSaveSetting = new System.Windows.Forms.Button();
             this.btnPowerOnOffTestConditionEditSetting = new System.Windows.Forms.Button();
@@ -1032,6 +1041,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudPowerOnOffTestConditionPowerOnTime)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.nudPowerOnOffTestConditionPowerPort)).BeginInit();
             this.groupBox14.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPowerOnOffTestConditionSleepTimer)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPowerOnOffTestConditionData)).BeginInit();
             this.tp_PowerOnOffFunctionTest.SuspendLayout();
             this.groupBox46.SuspendLayout();
@@ -4462,11 +4472,11 @@
             this.groupBox15.Controls.Add(this.nudPowerOnOffTestConditionPowerPort);
             this.groupBox15.Controls.Add(this.label46);
             this.groupBox15.Controls.Add(this.label45);
-            this.groupBox15.Location = new System.Drawing.Point(21, 20);
+            this.groupBox15.Location = new System.Drawing.Point(21, 14);
             this.groupBox15.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox15.Name = "groupBox15";
             this.groupBox15.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox15.Size = new System.Drawing.Size(471, 221);
+            this.groupBox15.Size = new System.Drawing.Size(320, 224);
             this.groupBox15.TabIndex = 13;
             this.groupBox15.TabStop = false;
             this.groupBox15.Text = "Controller Setting";
@@ -4474,7 +4484,7 @@
             // label50
             // 
             this.label50.AutoSize = true;
-            this.label50.Location = new System.Drawing.Point(360, 148);
+            this.label50.Location = new System.Drawing.Point(250, 148);
             this.label50.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label50.Name = "label50";
             this.label50.Size = new System.Drawing.Size(48, 15);
@@ -4484,7 +4494,7 @@
             // label49
             // 
             this.label49.AutoSize = true;
-            this.label49.Location = new System.Drawing.Point(360, 96);
+            this.label49.Location = new System.Drawing.Point(250, 100);
             this.label49.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label49.Name = "label49";
             this.label49.Size = new System.Drawing.Size(48, 15);
@@ -4494,7 +4504,7 @@
             // label47
             // 
             this.label47.AutoSize = true;
-            this.label47.Location = new System.Drawing.Point(63, 148);
+            this.label47.Location = new System.Drawing.Point(22, 146);
             this.label47.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label47.Name = "label47";
             this.label47.Size = new System.Drawing.Size(105, 15);
@@ -4503,10 +4513,10 @@
             // 
             // nudPowerOnOffTestConditionPowerOffTime
             // 
-            this.nudPowerOnOffTestConditionPowerOffTime.Location = new System.Drawing.Point(199, 145);
+            this.nudPowerOnOffTestConditionPowerOffTime.Location = new System.Drawing.Point(140, 143);
             this.nudPowerOnOffTestConditionPowerOffTime.Margin = new System.Windows.Forms.Padding(4);
             this.nudPowerOnOffTestConditionPowerOffTime.Name = "nudPowerOnOffTestConditionPowerOffTime";
-            this.nudPowerOnOffTestConditionPowerOffTime.Size = new System.Drawing.Size(149, 25);
+            this.nudPowerOnOffTestConditionPowerOffTime.Size = new System.Drawing.Size(106, 25);
             this.nudPowerOnOffTestConditionPowerOffTime.TabIndex = 4;
             this.nudPowerOnOffTestConditionPowerOffTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.nudPowerOnOffTestConditionPowerOffTime.Value = new decimal(new int[] {
@@ -4517,7 +4527,7 @@
             // 
             // nudPowerOnOffTestConditionPowerOnTime
             // 
-            this.nudPowerOnOffTestConditionPowerOnTime.Location = new System.Drawing.Point(199, 94);
+            this.nudPowerOnOffTestConditionPowerOnTime.Location = new System.Drawing.Point(140, 96);
             this.nudPowerOnOffTestConditionPowerOnTime.Margin = new System.Windows.Forms.Padding(4);
             this.nudPowerOnOffTestConditionPowerOnTime.Maximum = new decimal(new int[] {
             300,
@@ -4525,7 +4535,7 @@
             0,
             0});
             this.nudPowerOnOffTestConditionPowerOnTime.Name = "nudPowerOnOffTestConditionPowerOnTime";
-            this.nudPowerOnOffTestConditionPowerOnTime.Size = new System.Drawing.Size(149, 25);
+            this.nudPowerOnOffTestConditionPowerOnTime.Size = new System.Drawing.Size(106, 25);
             this.nudPowerOnOffTestConditionPowerOnTime.TabIndex = 3;
             this.nudPowerOnOffTestConditionPowerOnTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.nudPowerOnOffTestConditionPowerOnTime.Value = new decimal(new int[] {
@@ -4536,7 +4546,7 @@
             // 
             // nudPowerOnOffTestConditionPowerPort
             // 
-            this.nudPowerOnOffTestConditionPowerPort.Location = new System.Drawing.Point(199, 49);
+            this.nudPowerOnOffTestConditionPowerPort.Location = new System.Drawing.Point(140, 49);
             this.nudPowerOnOffTestConditionPowerPort.Margin = new System.Windows.Forms.Padding(4);
             this.nudPowerOnOffTestConditionPowerPort.Maximum = new decimal(new int[] {
             7,
@@ -4544,14 +4554,14 @@
             0,
             0});
             this.nudPowerOnOffTestConditionPowerPort.Name = "nudPowerOnOffTestConditionPowerPort";
-            this.nudPowerOnOffTestConditionPowerPort.Size = new System.Drawing.Size(149, 25);
+            this.nudPowerOnOffTestConditionPowerPort.Size = new System.Drawing.Size(106, 25);
             this.nudPowerOnOffTestConditionPowerPort.TabIndex = 2;
             this.nudPowerOnOffTestConditionPowerPort.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
             // label46
             // 
             this.label46.AutoSize = true;
-            this.label46.Location = new System.Drawing.Point(61, 99);
+            this.label46.Location = new System.Drawing.Point(23, 101);
             this.label46.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label46.Name = "label46";
             this.label46.Size = new System.Drawing.Size(106, 15);
@@ -4561,7 +4571,7 @@
             // label45
             // 
             this.label45.AutoSize = true;
-            this.label45.Location = new System.Drawing.Point(91, 51);
+            this.label45.Location = new System.Drawing.Point(51, 51);
             this.label45.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label45.Name = "label45";
             this.label45.Size = new System.Drawing.Size(78, 15);
@@ -4570,6 +4580,15 @@
             // 
             // groupBox14
             // 
+            this.groupBox14.Controls.Add(this.txtPowerOnOffTestConditionLoginPW);
+            this.groupBox14.Controls.Add(this.label155);
+            this.groupBox14.Controls.Add(this.txtPowerOnOffTestConditionLoginID);
+            this.groupBox14.Controls.Add(this.label154);
+            this.groupBox14.Controls.Add(this.label152);
+            this.groupBox14.Controls.Add(this.nudPowerOnOffTestConditionSleepTimer);
+            this.groupBox14.Controls.Add(this.label153);
+            this.groupBox14.Controls.Add(this.label151);
+            this.groupBox14.Controls.Add(this.cboxPowerOnOffTestConditionAction2);
             this.groupBox14.Controls.Add(this.txtPowerOnOffTestConditionModelName);
             this.groupBox14.Controls.Add(this.label48);
             this.groupBox14.Controls.Add(this.txtPowerOnOffTestConditionParameter2);
@@ -4577,29 +4596,128 @@
             this.groupBox14.Controls.Add(this.label44);
             this.groupBox14.Controls.Add(this.label43);
             this.groupBox14.Controls.Add(this.label42);
-            this.groupBox14.Controls.Add(this.cboxPowerOnOffTestConditionAction);
-            this.groupBox14.Location = new System.Drawing.Point(500, 14);
+            this.groupBox14.Controls.Add(this.cboxPowerOnOffTestConditionAction1);
+            this.groupBox14.Location = new System.Drawing.Point(347, 14);
             this.groupBox14.Margin = new System.Windows.Forms.Padding(4);
             this.groupBox14.Name = "groupBox14";
             this.groupBox14.Padding = new System.Windows.Forms.Padding(4);
-            this.groupBox14.Size = new System.Drawing.Size(391, 224);
+            this.groupBox14.Size = new System.Drawing.Size(564, 224);
             this.groupBox14.TabIndex = 12;
             this.groupBox14.TabStop = false;
             this.groupBox14.Text = "Device Setting";
             // 
+            // txtPowerOnOffTestConditionLoginPW
+            // 
+            this.txtPowerOnOffTestConditionLoginPW.Location = new System.Drawing.Point(439, 140);
+            this.txtPowerOnOffTestConditionLoginPW.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPowerOnOffTestConditionLoginPW.Name = "txtPowerOnOffTestConditionLoginPW";
+            this.txtPowerOnOffTestConditionLoginPW.Size = new System.Drawing.Size(100, 25);
+            this.txtPowerOnOffTestConditionLoginPW.TabIndex = 16;
+            this.txtPowerOnOffTestConditionLoginPW.Text = "user";
+            // 
+            // label155
+            // 
+            this.label155.AutoSize = true;
+            this.label155.Location = new System.Drawing.Point(407, 144);
+            this.label155.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label155.Name = "label155";
+            this.label155.Size = new System.Drawing.Size(32, 15);
+            this.label155.TabIndex = 15;
+            this.label155.Text = "PW:";
+            // 
+            // txtPowerOnOffTestConditionLoginID
+            // 
+            this.txtPowerOnOffTestConditionLoginID.Location = new System.Drawing.Point(289, 141);
+            this.txtPowerOnOffTestConditionLoginID.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPowerOnOffTestConditionLoginID.Name = "txtPowerOnOffTestConditionLoginID";
+            this.txtPowerOnOffTestConditionLoginID.Size = new System.Drawing.Size(100, 25);
+            this.txtPowerOnOffTestConditionLoginID.TabIndex = 14;
+            this.txtPowerOnOffTestConditionLoginID.Text = "user";
+            // 
+            // label154
+            // 
+            this.label154.AutoSize = true;
+            this.label154.Location = new System.Drawing.Point(263, 145);
+            this.label154.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label154.Name = "label154";
+            this.label154.Size = new System.Drawing.Size(26, 15);
+            this.label154.TabIndex = 13;
+            this.label154.Text = "ID:";
+            // 
+            // label152
+            // 
+            this.label152.AutoSize = true;
+            this.label152.Location = new System.Drawing.Point(442, 107);
+            this.label152.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label152.Name = "label152";
+            this.label152.Size = new System.Drawing.Size(48, 15);
+            this.label152.TabIndex = 12;
+            this.label152.Text = "Second";
+            // 
+            // nudPowerOnOffTestConditionSleepTimer
+            // 
+            this.nudPowerOnOffTestConditionSleepTimer.Location = new System.Drawing.Point(348, 103);
+            this.nudPowerOnOffTestConditionSleepTimer.Margin = new System.Windows.Forms.Padding(4);
+            this.nudPowerOnOffTestConditionSleepTimer.Maximum = new decimal(new int[] {
+            300,
+            0,
+            0,
+            0});
+            this.nudPowerOnOffTestConditionSleepTimer.Name = "nudPowerOnOffTestConditionSleepTimer";
+            this.nudPowerOnOffTestConditionSleepTimer.Size = new System.Drawing.Size(89, 25);
+            this.nudPowerOnOffTestConditionSleepTimer.TabIndex = 11;
+            this.nudPowerOnOffTestConditionSleepTimer.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.nudPowerOnOffTestConditionSleepTimer.Value = new decimal(new int[] {
+            30,
+            0,
+            0,
+            0});
+            // 
+            // label153
+            // 
+            this.label153.AutoSize = true;
+            this.label153.Location = new System.Drawing.Point(264, 108);
+            this.label153.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label153.Name = "label153";
+            this.label153.Size = new System.Drawing.Size(85, 15);
+            this.label153.TabIndex = 10;
+            this.label153.Text = "Sleep Timer: ";
+            // 
+            // label151
+            // 
+            this.label151.AutoSize = true;
+            this.label151.Location = new System.Drawing.Point(45, 108);
+            this.label151.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label151.Name = "label151";
+            this.label151.Size = new System.Drawing.Size(60, 15);
+            this.label151.TabIndex = 9;
+            this.label151.Text = "Action 2:";
+            // 
+            // cboxPowerOnOffTestConditionAction2
+            // 
+            this.cboxPowerOnOffTestConditionAction2.FormattingEnabled = true;
+            this.cboxPowerOnOffTestConditionAction2.Items.AddRange(new object[] {
+            "X",
+            "System Sleep"});
+            this.cboxPowerOnOffTestConditionAction2.Location = new System.Drawing.Point(110, 104);
+            this.cboxPowerOnOffTestConditionAction2.Margin = new System.Windows.Forms.Padding(4);
+            this.cboxPowerOnOffTestConditionAction2.Name = "cboxPowerOnOffTestConditionAction2";
+            this.cboxPowerOnOffTestConditionAction2.Size = new System.Drawing.Size(139, 23);
+            this.cboxPowerOnOffTestConditionAction2.TabIndex = 8;
+            // 
             // txtPowerOnOffTestConditionModelName
             // 
-            this.txtPowerOnOffTestConditionModelName.Location = new System.Drawing.Point(148, 35);
+            this.txtPowerOnOffTestConditionModelName.Location = new System.Drawing.Point(110, 36);
             this.txtPowerOnOffTestConditionModelName.Margin = new System.Windows.Forms.Padding(4);
             this.txtPowerOnOffTestConditionModelName.Name = "txtPowerOnOffTestConditionModelName";
-            this.txtPowerOnOffTestConditionModelName.Size = new System.Drawing.Size(177, 25);
+            this.txtPowerOnOffTestConditionModelName.Size = new System.Drawing.Size(140, 25);
             this.txtPowerOnOffTestConditionModelName.TabIndex = 7;
             this.txtPowerOnOffTestConditionModelName.Text = "Router";
             // 
             // label48
             // 
             this.label48.AutoSize = true;
-            this.label48.Location = new System.Drawing.Point(29, 42);
+            this.label48.Location = new System.Drawing.Point(21, 41);
             this.label48.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label48.Name = "label48";
             this.label48.Size = new System.Drawing.Size(85, 15);
@@ -4608,26 +4726,26 @@
             // 
             // txtPowerOnOffTestConditionParameter2
             // 
-            this.txtPowerOnOffTestConditionParameter2.Location = new System.Drawing.Point(148, 174);
+            this.txtPowerOnOffTestConditionParameter2.Location = new System.Drawing.Point(110, 174);
             this.txtPowerOnOffTestConditionParameter2.Margin = new System.Windows.Forms.Padding(4);
             this.txtPowerOnOffTestConditionParameter2.Name = "txtPowerOnOffTestConditionParameter2";
-            this.txtPowerOnOffTestConditionParameter2.Size = new System.Drawing.Size(177, 25);
+            this.txtPowerOnOffTestConditionParameter2.Size = new System.Drawing.Size(140, 25);
             this.txtPowerOnOffTestConditionParameter2.TabIndex = 5;
             this.txtPowerOnOffTestConditionParameter2.Text = "X";
             // 
             // txtPowerOnOffTestConditionParameter1
             // 
-            this.txtPowerOnOffTestConditionParameter1.Location = new System.Drawing.Point(148, 124);
+            this.txtPowerOnOffTestConditionParameter1.Location = new System.Drawing.Point(110, 140);
             this.txtPowerOnOffTestConditionParameter1.Margin = new System.Windows.Forms.Padding(4);
             this.txtPowerOnOffTestConditionParameter1.Name = "txtPowerOnOffTestConditionParameter1";
-            this.txtPowerOnOffTestConditionParameter1.Size = new System.Drawing.Size(177, 25);
+            this.txtPowerOnOffTestConditionParameter1.Size = new System.Drawing.Size(139, 25);
             this.txtPowerOnOffTestConditionParameter1.TabIndex = 4;
             this.txtPowerOnOffTestConditionParameter1.Text = "192.168.1.1";
             // 
             // label44
             // 
             this.label44.AutoSize = true;
-            this.label44.Location = new System.Drawing.Point(41, 178);
+            this.label44.Location = new System.Drawing.Point(26, 178);
             this.label44.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label44.Name = "label44";
             this.label44.Size = new System.Drawing.Size(79, 15);
@@ -4637,7 +4755,7 @@
             // label43
             // 
             this.label43.AutoSize = true;
-            this.label43.Location = new System.Drawing.Point(41, 126);
+            this.label43.Location = new System.Drawing.Point(26, 145);
             this.label43.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label43.Name = "label43";
             this.label43.Size = new System.Drawing.Size(79, 15);
@@ -4647,27 +4765,27 @@
             // label42
             // 
             this.label42.AutoSize = true;
-            this.label42.Location = new System.Drawing.Point(69, 84);
+            this.label42.Location = new System.Drawing.Point(45, 75);
             this.label42.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label42.Name = "label42";
-            this.label42.Size = new System.Drawing.Size(49, 15);
+            this.label42.Size = new System.Drawing.Size(60, 15);
             this.label42.TabIndex = 1;
-            this.label42.Text = "Action:";
+            this.label42.Text = "Action 1:";
             // 
-            // cboxPowerOnOffTestConditionAction
+            // cboxPowerOnOffTestConditionAction1
             // 
-            this.cboxPowerOnOffTestConditionAction.FormattingEnabled = true;
-            this.cboxPowerOnOffTestConditionAction.Items.AddRange(new object[] {
+            this.cboxPowerOnOffTestConditionAction1.FormattingEnabled = true;
+            this.cboxPowerOnOffTestConditionAction1.Items.AddRange(new object[] {
             "Ping"});
-            this.cboxPowerOnOffTestConditionAction.Location = new System.Drawing.Point(148, 81);
-            this.cboxPowerOnOffTestConditionAction.Margin = new System.Windows.Forms.Padding(4);
-            this.cboxPowerOnOffTestConditionAction.Name = "cboxPowerOnOffTestConditionAction";
-            this.cboxPowerOnOffTestConditionAction.Size = new System.Drawing.Size(177, 23);
-            this.cboxPowerOnOffTestConditionAction.TabIndex = 0;
+            this.cboxPowerOnOffTestConditionAction1.Location = new System.Drawing.Point(110, 71);
+            this.cboxPowerOnOffTestConditionAction1.Margin = new System.Windows.Forms.Padding(4);
+            this.cboxPowerOnOffTestConditionAction1.Name = "cboxPowerOnOffTestConditionAction1";
+            this.cboxPowerOnOffTestConditionAction1.Size = new System.Drawing.Size(140, 23);
+            this.cboxPowerOnOffTestConditionAction1.TabIndex = 0;
             // 
             // btnPowerOnOffTestConditionLoadSetting
             // 
-            this.btnPowerOnOffTestConditionLoadSetting.Location = new System.Drawing.Point(1044, 158);
+            this.btnPowerOnOffTestConditionLoadSetting.Location = new System.Drawing.Point(1048, 142);
             this.btnPowerOnOffTestConditionLoadSetting.Margin = new System.Windows.Forms.Padding(4);
             this.btnPowerOnOffTestConditionLoadSetting.Name = "btnPowerOnOffTestConditionLoadSetting";
             this.btnPowerOnOffTestConditionLoadSetting.Size = new System.Drawing.Size(108, 44);
@@ -4678,10 +4796,10 @@
             // 
             // btnPowerOnOffTestConditionSaveSetting
             // 
-            this.btnPowerOnOffTestConditionSaveSetting.Location = new System.Drawing.Point(1044, 60);
+            this.btnPowerOnOffTestConditionSaveSetting.Location = new System.Drawing.Point(1048, 88);
             this.btnPowerOnOffTestConditionSaveSetting.Margin = new System.Windows.Forms.Padding(4);
             this.btnPowerOnOffTestConditionSaveSetting.Name = "btnPowerOnOffTestConditionSaveSetting";
-            this.btnPowerOnOffTestConditionSaveSetting.Size = new System.Drawing.Size(111, 48);
+            this.btnPowerOnOffTestConditionSaveSetting.Size = new System.Drawing.Size(108, 48);
             this.btnPowerOnOffTestConditionSaveSetting.TabIndex = 10;
             this.btnPowerOnOffTestConditionSaveSetting.Text = "Save Setting";
             this.btnPowerOnOffTestConditionSaveSetting.UseVisualStyleBackColor = true;
@@ -4689,7 +4807,7 @@
             // 
             // btnPowerOnOffTestConditionEditSetting
             // 
-            this.btnPowerOnOffTestConditionEditSetting.Location = new System.Drawing.Point(913, 158);
+            this.btnPowerOnOffTestConditionEditSetting.Location = new System.Drawing.Point(925, 142);
             this.btnPowerOnOffTestConditionEditSetting.Margin = new System.Windows.Forms.Padding(4);
             this.btnPowerOnOffTestConditionEditSetting.Name = "btnPowerOnOffTestConditionEditSetting";
             this.btnPowerOnOffTestConditionEditSetting.Size = new System.Drawing.Size(111, 44);
@@ -4700,7 +4818,7 @@
             // 
             // btnPowerOnOffTestConditionAddSetting
             // 
-            this.btnPowerOnOffTestConditionAddSetting.Location = new System.Drawing.Point(913, 61);
+            this.btnPowerOnOffTestConditionAddSetting.Location = new System.Drawing.Point(925, 89);
             this.btnPowerOnOffTestConditionAddSetting.Margin = new System.Windows.Forms.Padding(4);
             this.btnPowerOnOffTestConditionAddSetting.Name = "btnPowerOnOffTestConditionAddSetting";
             this.btnPowerOnOffTestConditionAddSetting.Size = new System.Drawing.Size(111, 48);
@@ -12329,6 +12447,11 @@
             this.Controls.Add(this.labElapsedTime);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.PowerOnOff_tabControl);
+            this.Controls.Add(this.tmp_tabControl);
+            this.Controls.Add(this.tabControl_GUI);
+            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.tabControl_GuestNetworkTest);
             this.Controls.Add(this.tabControl_GUItest);
             this.Controls.Add(this.tabControl_USBStorage);
             this.Controls.Add(this.tabControl_Interoperability);
@@ -12337,11 +12460,6 @@
             this.Controls.Add(this.tabControl_RouterIntegration);
             this.Controls.Add(this.tabControl_ChamberPerformance);
             this.Controls.Add(this.tabControl_Throughput);
-            this.Controls.Add(this.PowerOnOff_tabControl);
-            this.Controls.Add(this.tmp_tabControl);
-            this.Controls.Add(this.tabControl_GUI);
-            this.Controls.Add(this.menuStrip1);
-            this.Controls.Add(this.tabControl_GuestNetworkTest);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -12465,6 +12583,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.nudPowerOnOffTestConditionPowerPort)).EndInit();
             this.groupBox14.ResumeLayout(false);
             this.groupBox14.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nudPowerOnOffTestConditionSleepTimer)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPowerOnOffTestConditionData)).EndInit();
             this.tp_PowerOnOffFunctionTest.ResumeLayout(false);
             this.groupBox46.ResumeLayout(false);
@@ -12836,7 +12955,7 @@
         private System.Windows.Forms.Label label44;
         private System.Windows.Forms.Label label43;
         private System.Windows.Forms.Label label42;
-        private System.Windows.Forms.ComboBox cboxPowerOnOffTestConditionAction;
+        private System.Windows.Forms.ComboBox cboxPowerOnOffTestConditionAction1;
         private System.Windows.Forms.Timer timerElaspedTime;
         private System.Windows.Forms.GroupBox groupBox15;
         private System.Windows.Forms.Label label47;
@@ -13559,6 +13678,15 @@
         private System.Windows.Forms.Label label150;
         private System.Windows.Forms.TextBox txtGuestNetworkFunctionTest_TestItemsScriptFilePath;
         private System.Windows.Forms.Button btnGuestNetworkFunctionTest_TestItemsScriptBrowse;
+        private System.Windows.Forms.Label label151;
+        private System.Windows.Forms.ComboBox cboxPowerOnOffTestConditionAction2;
+        private System.Windows.Forms.Label label152;
+        private System.Windows.Forms.NumericUpDown nudPowerOnOffTestConditionSleepTimer;
+        private System.Windows.Forms.Label label153;
+        private System.Windows.Forms.TextBox txtPowerOnOffTestConditionLoginPW;
+        private System.Windows.Forms.Label label155;
+        private System.Windows.Forms.TextBox txtPowerOnOffTestConditionLoginID;
+        private System.Windows.Forms.Label label154;
     }
 }
 

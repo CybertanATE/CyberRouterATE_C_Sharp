@@ -1,3 +1,31 @@
+V1.0.2020.0715 :
+	Release Date: 2020/07/15
+	Release History:
+		New Item:
+				  1. Power On/Off Test: Add Remote DUT(PX) Sleep Mode after "Ping" Action
+				  	  (Note: Remote DUT must setting the login ID and PW)
+
+		Fixed Issue: 
+				  None
+
+
+		All Items: 
+				  1. RvR Test: 	  		 	  	v1.0.2018.1001
+				  2. Power On/Off Test: 	  		v1.0.2020.0715
+				  3. RvR-Turn Table Test: 			v1.0.2018.1001
+				  4. Interoperability Test:	 		v1.0.2018.1001
+				  5. Throughput Test: 				v1.0.2018.1001
+				  6. Web GUI Test:
+				  	- FW Upgrade/Downgrade Stress Test	v1.0.2020.0103
+                      ** Support DUT: EA7300v2
+                                      EA6350v4
+                                      MR9000
+                                      MR6350
+				  	- GUI test				v1.0.2018.1214
+				  7. USB Storage test				v1.0.2018.1227
+
+------------------------------------------------------------------------------------------------------------------
+
 V1.0.2020.0103 :
 	Release Date: 2020/01/03
 	Release History:
